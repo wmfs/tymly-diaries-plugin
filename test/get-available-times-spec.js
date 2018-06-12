@@ -87,7 +87,7 @@ describe('Test the get available times state resource', function () {
       {
         pluginPaths: [
           path.resolve(__dirname, './..'),
-          path.resolve(__dirname, '../node_modules/tymly-test-helpers/plugins/allow-everything-rbac-plugin')
+          require.resolve('@wmfs/tymly-test-helpers')
         ],
         blueprintPaths: [
           path.resolve(__dirname, './fixtures/test-blueprint')
