@@ -6,6 +6,11 @@ notifications:
   email: false
 node_js:
   - '9'
+before_script:
+  - echo 'Europe/London' | sudo tee /etc/timezone
+  - sudo dpkg-reconfigure --frontend noninteractive tzdata
+before_install:
+  - export TZ=Europe/London
 install:
   - npm install
 test:
