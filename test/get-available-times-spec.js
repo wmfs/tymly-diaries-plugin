@@ -1,6 +1,6 @@
 /* eslint-env mocha */
 
-const tymly = require('tymly')
+const tymly = require('@wmfs/tymly')
 const path = require('path')
 const expect = require('chai').expect
 
