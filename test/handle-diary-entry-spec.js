@@ -70,7 +70,7 @@ describe('Tests the state resource which handle diary entries', function () {
       {
         pluginPaths: [
           path.resolve(__dirname, './..'),
-          require.resolve('@wmfs/tymly-test-helpers')
+          path.resolve(__dirname, '../node_modules/@wmfs/tymly-test-helpers/plugins/allow-everything-rbac-plugin')
         ],
         blueprintPaths: [
           path.resolve(__dirname, './fixtures/test-blueprint')
