@@ -2,7 +2,7 @@
   "slots": {
     "durationMinutes": 60,
     "maxConcurrency": 3,
-    "maxCapacity": 50,
+    "maxCapacity": 10,
     "startTime": "08:30:00",
     "endTime": "22:30:00",
     "restrictions": {

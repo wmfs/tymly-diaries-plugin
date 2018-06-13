@@ -100,20 +100,16 @@ describe('Tests the state resource which handle diary entries', function () {
   it('should start the create diary state machine with a valid date time', async () => {
     expect((await entryModel.find({})).length).to.eql(TEST_RECORDS.length)
 
-    const executionDescription = await statebox.startExecution(
-      {
-        startDateTime: DATE_TIME
-      },
+    const execDesc = await statebox.startExecution(
+      {startDateTime: DATE_TIME},
       CREATE_ENTRY_STATE_MACHINE_NAME,
-      {
-        sendResponse: 'COMPLETE'
-      }
+      {sendResponse: 'COMPLETE'}
     )
 
-    expect(executionDescription.currentStateName).to.eql('CreateEntry')
-    expect(executionDescription.currentResource).to.eql('module:createDiaryEntry')
-    expect(executionDescription.status).to.eql('SUCCEEDED')
-    entryId = executionDescription.ctx.idProperties.id
+    expect(execDesc.currentStateName).to.eql('CreateEntry')
+    expect(execDesc.currentResource).to.eql('module:createDiaryEntry')
+    expect(execDesc.status).to.eql('SUCCEEDED')
+    entryId = execDesc.ctx.idProperties.id
 
     expect((await entryModel.find({})).length).to.eql(TEST_RECORDS.length + 1)
   })
@@ -126,86 +122,58 @@ describe('Tests the state resource which handle diary entries', function () {
     expect(doc.endDateTime).to.eql(EXPECTED_END_DATE_TIME)
   })
 
-  it('should start the create diary state machine with a date time that does not fall within the start/end rules', done => {
-    statebox.startExecution(
-      {
-        startDateTime: BAD_DATE_TIME
-      },
+  it('should start the create diary state machine with a date time that does not fall within the start/end rules', async () => {
+    const execDesc = await statebox.startExecution(
+      {startDateTime: BAD_DATE_TIME},
       CREATE_ENTRY_STATE_MACHINE_NAME,
-      {
-        sendResponse: 'COMPLETE'
-      },
-      (err, executionDescription) => {
-        if (err) return done(err)
-        expect(executionDescription.currentStateName).to.eql('CreateEntry')
-        expect(executionDescription.currentResource).to.eql('module:createDiaryEntry')
-        expect(executionDescription.status).to.eql('FAILED')
-        expect(executionDescription.errorMessage).to.eql('createDiaryEntryFail')
-        expect(executionDescription.errorCode).to.eql('The appointment must be between 08:30 and 22:30.')
-        done()
-      }
+      {sendResponse: 'COMPLETE'}
     )
+
+    expect(execDesc.currentStateName).to.eql('CreateEntry')
+    expect(execDesc.currentResource).to.eql('module:createDiaryEntry')
+    expect(execDesc.status).to.eql('FAILED')
+    expect(execDesc.errorMessage).to.eql('createDiaryEntryFail')
+    expect(execDesc.errorCode).to.eql('The appointment must be between 08:30 and 22:30.')
   })
 
-  it('should start the create diary state machine with a start date time that collides with lunch time\'s maximum concurrency', done => {
-    statebox.startExecution(
-      {
-        startDateTime: BAD_DATE_TIME_1
-      },
+  it('should start the create diary state machine with a start date time that collides with lunch time\'s maximum concurrency', async () => {
+    const execDesc = await statebox.startExecution(
+      {startDateTime: BAD_DATE_TIME_1},
       CREATE_ENTRY_STATE_MACHINE_NAME,
-      {
-        sendResponse: 'COMPLETE'
-      },
-      (err, executionDescription) => {
-        if (err) return done(err)
-        expect(executionDescription.currentStateName).to.eql('CreateEntry')
-        expect(executionDescription.currentResource).to.eql('module:createDiaryEntry')
-        expect(executionDescription.status).to.eql('FAILED')
-        expect(executionDescription.errorMessage).to.eql('createDiaryEntryFail')
-        expect(executionDescription.errorCode).to.eql('Max. appointments already made at this time.')
-        done()
-      }
+      {sendResponse: 'COMPLETE'}
     )
+
+    expect(execDesc.currentStateName).to.eql('CreateEntry')
+    expect(execDesc.currentResource).to.eql('module:createDiaryEntry')
+    expect(execDesc.status).to.eql('FAILED')
+    expect(execDesc.errorMessage).to.eql('createDiaryEntryFail')
+    expect(execDesc.errorCode).to.eql('Max. appointments already made at this time.')
   })
 
-  it('should start the create diary state machine with a start date time where max concurrency has already been met', done => {
-    statebox.startExecution(
-      {
-        startDateTime: BAD_DATE_TIME_2
-      },
+  it('should start the create diary state machine with a start date time where max concurrency has already been met', async () => {
+    const execDesc = await statebox.startExecution(
+      {startDateTime: BAD_DATE_TIME_2},
       CREATE_ENTRY_STATE_MACHINE_NAME,
-      {
-        sendResponse: 'COMPLETE'
-      },
-      (err, executionDescription) => {
-        if (err) return done(err)
-        expect(executionDescription.currentStateName).to.eql('CreateEntry')
-        expect(executionDescription.currentResource).to.eql('module:createDiaryEntry')
-        expect(executionDescription.status).to.eql('FAILED')
-        expect(executionDescription.errorCode).to.eql('Max. appointments already made at this time.')
-        expect(executionDescription.errorMessage).to.eql('createDiaryEntryFail')
-        done()
-      }
+      {sendResponse: 'COMPLETE'}
     )
+
+    expect(execDesc.currentStateName).to.eql('CreateEntry')
+    expect(execDesc.currentResource).to.eql('module:createDiaryEntry')
+    expect(execDesc.status).to.eql('FAILED')
+    expect(execDesc.errorCode).to.eql('Max. appointments already made at this time.')
+    expect(execDesc.errorMessage).to.eql('createDiaryEntryFail')
   })
 
-  it('should start the cancel-diary-entry state machine', done => {
-    statebox.startExecution(
-      {
-        id: entryId
-      },
+  it('should start the cancel-diary-entry state machine', async () => {
+    const execDesc = await statebox.startExecution(
+      {id: entryId},
       CANCEL_ENTRY_STATE_MACHINE_NAME,
-      {
-        sendResponse: 'COMPLETE'
-      },
-      (err, executionDescription) => {
-        if (err) return done(err)
-        expect(executionDescription.currentStateName).to.eql('CancelEntry')
-        expect(executionDescription.currentResource).to.eql('module:cancelDiaryEntry')
-        expect(executionDescription.status).to.eql('SUCCEEDED')
-        done()
-      }
+      {sendResponse: 'COMPLETE'}
     )
+
+    expect(execDesc.currentStateName).to.eql('CancelEntry')
+    expect(execDesc.currentResource).to.eql('module:cancelDiaryEntry')
+    expect(execDesc.status).to.eql('SUCCEEDED')
   })
 
   it('should fail to find deleted record', async () => {
@@ -216,6 +184,25 @@ describe('Tests the state resource which handle diary entries', function () {
   it('should check the amount of entries remain as they were at the start', async () => {
     const doc = await entryModel.find({})
     expect(doc.length).to.eql(TEST_RECORDS.length)
+  })
+
+  it('should attempt to create > 3 entries at the same date time and expect failure', async () => {
+    const time = `2018-06-10T10:30:00`
+
+    for (let i = 0; i < 4; i++) {
+      const execDesc = await statebox.startExecution(
+        {startDateTime: time},
+        CREATE_ENTRY_STATE_MACHINE_NAME,
+        {sendResponse: 'COMPLETE'}
+      )
+      if (i < 3) {
+        expect(execDesc.status).to.eql('SUCCEEDED')
+      }
+      if (i === 3) {
+        expect(execDesc.status).to.eql('FAILED')
+        expect(execDesc.errorCode).to.eql('Max. appointments already made at this time.')
+      }
+    }
   })
 
   it('should shutdown Tymly', async () => {
