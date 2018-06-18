@@ -35,7 +35,7 @@
     "semantic-release": "^15.5.2",
     "standard": "11.0.1",
     "@wmfs/hl-pg-client": "1.1.2",
-    "@wmfs/tymly": "1.1.0",
+    "@wmfs/tymly": "1.1.1",
     "@wmfs/tymly-test-helpers": "1.0.0"
   },
   "scripts": {
