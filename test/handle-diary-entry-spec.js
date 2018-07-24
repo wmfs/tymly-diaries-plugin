@@ -133,7 +133,7 @@ describe('Tests the state resource which handle diary entries', function () {
     expect(execDesc.currentResource).to.eql('module:createDiaryEntry')
     expect(execDesc.status).to.eql('FAILED')
     expect(execDesc.errorMessage).to.eql('createDiaryEntryFail')
-    expect(execDesc.errorCode).to.eql('The appointment must be between 08:30 and 22:30.')
+    expect(execDesc.errorCode).to.eql('The appointment must be after 08:30.')
   })
 
   it('should start the create diary state machine with a start date time that collides with lunch time\'s maximum concurrency', async () => {
@@ -200,7 +200,7 @@ describe('Tests the state resource which handle diary entries', function () {
       }
       if (i === 3) {
         expect(execDesc.status).to.eql('FAILED')
-        expect(execDesc.errorCode).to.eql('Max. appointments already made at this time.')
+        expect(execDesc.errorCode).to.eql('Max. appointments of 3 already made at 2018-06-10 10:30:00.')
       }
     }
   })
