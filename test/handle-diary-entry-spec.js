@@ -227,6 +227,39 @@ describe('Tests the state resource which handle diary entries', function () {
     }
   })
 
+  it('should attempt to create > 10 entries at the same date and expect failure', async () => {
+    const times = [`2018-07-23T08:30:00`]
+    for (let i = 1; i < 11; i++) {
+      const time = moment(times[i - 1]).add(1, 'hour')
+      if (time.format('HH:mm:ss') === '11:30:00') {
+        times.push(time.add(3, 'hours').format('YYYY-MM-DDTHH:mm:ss'))
+      } else if (time.format('HH:mm:ss') === '12:30:00') {
+        times.push(time.add(2, 'hours').format('YYYY-MM-DDTHH:mm:ss'))
+      } else if (time.format('HH:mm:ss') === '13:30:00') {
+        times.push(time.add(1, 'hours').format('YYYY-MM-DDTHH:mm:ss'))
+      } else {
+        times.push(time.format('YYYY-MM-DDTHH:mm:ss'))
+      }
+    }
+
+    expect(times.length).to.eql(11)
+
+    for (const [i, time] of times.entries()) {
+      const execDesc = await statebox.startExecution(
+        {startDateTime: time},
+        CREATE_ENTRY_STATE_MACHINE_NAME,
+        {sendResponse: 'COMPLETE'}
+      )
+
+      if (i === 10) {
+        expect(execDesc.status).to.eql('FAILED')
+        expect(execDesc.errorCode).to.eql('Max. appointments of 10 already made on 2018-07-23.')
+      } else {
+        expect(execDesc.status).to.eql('SUCCEEDED')
+      }
+    }
+  })
+
   it('should attempt to create entries at each time slot of the day', async () => {
     for (const [i, timeslot] of TEST_ENTRIES.entries()) {
       const execDesc = await statebox.startExecution(
