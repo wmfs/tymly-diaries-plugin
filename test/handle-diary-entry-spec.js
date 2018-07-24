@@ -4,6 +4,7 @@ const tymly = require('@wmfs/tymly')
 const path = require('path')
 const expect = require('chai').expect
 const moment = require('moment')
+const isWithinRange = require('../lib/components/state-resources/create-diary-entry/helpers/is-within-range')
 
 const CREATE_ENTRY_STATE_MACHINE_NAME = 'test_createDiaryEntry'
 const CANCEL_ENTRY_STATE_MACHINE_NAME = 'test_cancelDiaryEntry'
@@ -11,9 +12,7 @@ const CANCEL_ENTRY_STATE_MACHINE_NAME = 'test_cancelDiaryEntry'
 const DURATION = 60
 const DATE_TIME = '2018-04-23T09:30:00+01:00'
 const EXPECTED_END_DATE_TIME = moment(DATE_TIME).add(DURATION, 'minutes').format()
-const BAD_DATE_TIME = '2018-04-23T06:30:00'
-const BAD_DATE_TIME_1 = '2018-04-23T12:30:00'
-const BAD_DATE_TIME_2 = '2018-04-23T15:30:00'
+const BAD_DATE_TIME = '2018-04-23T12:30:00'
 
 const TEST_RECORDS = [
   {
@@ -50,6 +49,57 @@ const TEST_RECORDS = [
     diaryId: 'doctors',
     startDateTime: '2018-04-22T15:30:00',
     endDateTime: '2018-04-22T16:30:00'
+  }
+]
+
+const TEST_ENTRIES = [
+  {
+    startDateTime: '2018-04-25T07:30:00',
+    endDateTime: '2018-04-25T08:30:00'
+  },
+  {
+    startDateTime: '2018-04-25T08:30:00',
+    endDateTime: '2018-04-25T09:30:00'
+  },
+  {
+    startDateTime: '2018-04-25T09:30:00',
+    endDateTime: '2018-04-25T10:30:00'
+  },
+  {
+    startDateTime: '2018-04-25T10:30:00',
+    endDateTime: '2018-04-25T11:30:00'
+  },
+  {
+    startDateTime: '2018-04-25T11:30:00',
+    endDateTime: '2018-04-25T12:30:00'
+  },
+  {
+    startDateTime: '2018-04-25T12:30:00',
+    endDateTime: '2018-04-25T13:30:00'
+  },
+  {
+    startDateTime: '2018-04-25T16:30:00',
+    endDateTime: '2018-04-25T17:30:00'
+  },
+  {
+    startDateTime: '2018-04-25T17:30:00',
+    endDateTime: '2018-04-25T18:30:00'
+  },
+  {
+    startDateTime: '2018-04-25T19:30:00',
+    endDateTime: '2018-04-25T20:30:00'
+  },
+  {
+    startDateTime: '2018-04-25T20:30:00',
+    endDateTime: '2018-04-25T21:30:00'
+  },
+  {
+    startDateTime: '2018-04-25T21:30:00',
+    endDateTime: '2018-04-25T22:30:00'
+  },
+  {
+    startDateTime: '2018-04-25T22:30:00',
+    endDateTime: '2018-04-25T23:30:00'
   }
 ]
 
@@ -122,7 +172,7 @@ describe('Tests the state resource which handle diary entries', function () {
     expect(doc.endDateTime).to.eql(EXPECTED_END_DATE_TIME)
   })
 
-  it('should start the create diary state machine with a date time that does not fall within the start/end rules', async () => {
+  it('should start the create diary state machine with a start date time that collides with lunch time\'s maximum concurrency', async () => {
     const execDesc = await statebox.startExecution(
       {startDateTime: BAD_DATE_TIME},
       CREATE_ENTRY_STATE_MACHINE_NAME,
@@ -133,35 +183,7 @@ describe('Tests the state resource which handle diary entries', function () {
     expect(execDesc.currentResource).to.eql('module:createDiaryEntry')
     expect(execDesc.status).to.eql('FAILED')
     expect(execDesc.errorMessage).to.eql('createDiaryEntryFail')
-    expect(execDesc.errorCode).to.eql('The appointment must be after 08:30.')
-  })
-
-  it('should start the create diary state machine with a start date time that collides with lunch time\'s maximum concurrency', async () => {
-    const execDesc = await statebox.startExecution(
-      {startDateTime: BAD_DATE_TIME_1},
-      CREATE_ENTRY_STATE_MACHINE_NAME,
-      {sendResponse: 'COMPLETE'}
-    )
-
-    expect(execDesc.currentStateName).to.eql('CreateEntry')
-    expect(execDesc.currentResource).to.eql('module:createDiaryEntry')
-    expect(execDesc.status).to.eql('FAILED')
-    expect(execDesc.errorMessage).to.eql('createDiaryEntryFail')
     expect(execDesc.errorCode).to.eql('Max. appointments already made at this time.')
-  })
-
-  it('should start the create diary state machine with a start date time where max concurrency has already been met', async () => {
-    const execDesc = await statebox.startExecution(
-      {startDateTime: BAD_DATE_TIME_2},
-      CREATE_ENTRY_STATE_MACHINE_NAME,
-      {sendResponse: 'COMPLETE'}
-    )
-
-    expect(execDesc.currentStateName).to.eql('CreateEntry')
-    expect(execDesc.currentResource).to.eql('module:createDiaryEntry')
-    expect(execDesc.status).to.eql('FAILED')
-    expect(execDesc.errorCode).to.eql('Max. appointments already made at this time.')
-    expect(execDesc.errorMessage).to.eql('createDiaryEntryFail')
   })
 
   it('should start the cancel-diary-entry state machine', async () => {
@@ -203,6 +225,55 @@ describe('Tests the state resource which handle diary entries', function () {
         expect(execDesc.errorCode).to.eql('Max. appointments of 3 already made at 2018-06-10 10:30:00.')
       }
     }
+  })
+
+  it('should attempt to create entries at each time slot of the day', async () => {
+    for (const [i, timeslot] of TEST_ENTRIES.entries()) {
+      const execDesc = await statebox.startExecution(
+        {startDateTime: timeslot.startDateTime},
+        CREATE_ENTRY_STATE_MACHINE_NAME,
+        {sendResponse: 'COMPLETE'}
+      )
+
+      if (i === 0) {
+        expect(execDesc.status).to.eql('FAILED')
+        expect(execDesc.errorCode).to.eql('The appointment must be after 08:30.')
+      } else if (i === 4 || i === 5) {
+        // Lunch time restrictions
+        expect(execDesc.status).to.eql('FAILED')
+        expect(execDesc.errorCode).to.eql('Max. appointments already made at this time.')
+      } else if (i === 11) {
+        expect(execDesc.status).to.eql('FAILED')
+        expect(execDesc.errorCode).to.eql('The appointment must be before 22:30.')
+      } else {
+        expect(execDesc.status).to.eql('SUCCEEDED')
+        const id = execDesc.ctx.idProperties.id
+        const res = await entryModel.findById(id)
+        expect(res.endDateTime.split('+')[0]).to.eql(timeslot.endDateTime)
+      }
+    }
+  })
+
+  it('should test the function to check if a date time is within a range', () => {
+    const a = moment('2018-04-25T21:30:00')
+    const b = moment('2018-04-25T12:30:00')
+    const c = moment('2018-04-25T12:00:00')
+    const d = moment('2018-04-25T13:30:00')
+
+    const start = moment('2018-04-25T12:00:00')
+    const end = moment('2018-04-25T13:30:00')
+
+    const valueA = isWithinRange(start, end, a)
+    expect(valueA).to.eql(false)
+
+    const valueB = isWithinRange(start, end, b)
+    expect(valueB).to.eql(true)
+
+    const valueC = isWithinRange(start, end, c)
+    expect(valueC).to.eql(true)
+
+    const valueD = isWithinRange(start, end, d)
+    expect(valueD).to.eql(true)
   })
 
   it('should shutdown Tymly', async () => {
