@@ -1,3 +1,15 @@
+## [1.0.13](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.0.12...v1.0.13) (2018-07-25)
+
+
+### 🐛 Bug Fixes
+
+* change range check to exclusive ([d9a9be2](https://github.com/wmfs/tymly-diaries-plugin/commit/d9a9be2))
+
+
+### 🚨 Tests
+
+* added test for max capacity ([75244d4](https://github.com/wmfs/tymly-diaries-plugin/commit/75244d4))
+
 ## [1.0.12](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.0.11...v1.0.12) (2018-07-24)
 
 
