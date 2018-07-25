@@ -287,26 +287,29 @@ describe('Tests the state resource which handle diary entries', function () {
     }
   })
 
-  it('should test the function to check if a date time is within a range', () => {
-    const a = moment('2018-04-25T21:30:00')
-    const b = moment('2018-04-25T12:30:00')
-    const c = moment('2018-04-25T12:00:00')
-    const d = moment('2018-04-25T13:30:00')
+  it('should test the function to check if a date time is within a range (exclusive)', () => {
+    const good = [
+      moment('2018-04-25T08:30:00'),
+      moment('2018-04-25T21:30:00'),
+      moment('2018-04-25T13:30:00'),
+      moment('2018-04-25T12:00:00')
+    ]
+    const bad = [
+      moment('2018-04-25T12:30:00'),
+      moment('2018-04-25T12:10:00'),
+      moment('2018-04-25T13:00:00')
+    ]
 
     const start = moment('2018-04-25T12:00:00')
     const end = moment('2018-04-25T13:30:00')
 
-    const valueA = isWithinRange(start, end, a)
-    expect(valueA).to.eql(false)
+    for (let time of good) {
+      expect(isWithinRange(start, end, time)).to.eql(false)
+    }
 
-    const valueB = isWithinRange(start, end, b)
-    expect(valueB).to.eql(true)
-
-    const valueC = isWithinRange(start, end, c)
-    expect(valueC).to.eql(true)
-
-    const valueD = isWithinRange(start, end, d)
-    expect(valueD).to.eql(true)
+    for (let time of bad) {
+      expect(isWithinRange(start, end, time)).to.eql(true)
+    }
   })
 
   it('should shutdown Tymly', async () => {
