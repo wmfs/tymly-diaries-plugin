@@ -1,3 +1,29 @@
+## [1.0.14](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.0.13...v1.0.14) (2018-08-06)
+
+
+### 🐛 Bug Fixes
+
+* refactor date handling and added tests ([b44e215](https://github.com/wmfs/tymly-diaries-plugin/commit/b44e215))
+
+
+### 🛠 Builds
+
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement to 1.12.0 ([db087ff](https://github.com/wmfs/tymly-diaries-plugin/commit/db087ff))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement to 1.12.1 ([6372168](https://github.com/wmfs/tymly-diaries-plugin/commit/6372168))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement to 1.13.0 ([68ef98c](https://github.com/wmfs/tymly-diaries-plugin/commit/68ef98c))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement to 1.13.1 ([73c1013](https://github.com/wmfs/tymly-diaries-plugin/commit/73c1013))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement to 1.14.0 ([410842d](https://github.com/wmfs/tymly-diaries-plugin/commit/410842d))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly-test-helpers requirement to 1.1.0 ([0bbe94c](https://github.com/wmfs/tymly-diaries-plugin/commit/0bbe94c))
+* **deps-dev:** update semantic-release requirement from 15.9.3 to 15.9.5 ([2ce8ea1](https://github.com/wmfs/tymly-diaries-plugin/commit/2ce8ea1))
+* **deps-dev:** update semantic-release requirement to 15.9.1 ([26d3679](https://github.com/wmfs/tymly-diaries-plugin/commit/26d3679))
+* **deps-dev:** update semantic-release requirement to 15.9.2 ([83719fc](https://github.com/wmfs/tymly-diaries-plugin/commit/83719fc))
+* **deps-dev:** update semantic-release requirement to 15.9.3 ([4c4935a](https://github.com/wmfs/tymly-diaries-plugin/commit/4c4935a))
+
+
+### 🚨 Tests
+
+* Added tests ([4f6c410](https://github.com/wmfs/tymly-diaries-plugin/commit/4f6c410))
+
 ## [1.0.13](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.0.12...v1.0.13) (2018-07-25)
 
 
