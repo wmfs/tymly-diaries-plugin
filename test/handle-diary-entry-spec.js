@@ -11,7 +11,7 @@ const CANCEL_ENTRY_STATE_MACHINE_NAME = 'test_cancelDiaryEntry'
 
 const DURATION = 60
 const DATE_TIME = '2018-04-23T09:30:00+01:00'
-const EXPECTED_END_DATE_TIME = moment(DATE_TIME).add(DURATION, 'minutes').format()
+const EXPECTED_END_DATE_TIME = moment(DATE_TIME).add(DURATION, 'minutes').format('YYYY-MM-DD HH:mm:ss')
 const BAD_DATE_TIME = '2018-04-23T12:30:00'
 
 const TEST_RECORDS = [
@@ -55,51 +55,51 @@ const TEST_RECORDS = [
 const TEST_ENTRIES = [
   {
     startDateTime: '2018-04-25T07:30:00',
-    endDateTime: '2018-04-25T08:30:00'
+    endDateTime: '2018-04-25 08:30:00'
   },
   {
     startDateTime: '2018-04-25T08:30:00',
-    endDateTime: '2018-04-25T09:30:00'
+    endDateTime: '2018-04-25 09:30:00'
   },
   {
     startDateTime: '2018-04-25T09:30:00',
-    endDateTime: '2018-04-25T10:30:00'
+    endDateTime: '2018-04-25 10:30:00'
   },
   {
     startDateTime: '2018-04-25T10:30:00',
-    endDateTime: '2018-04-25T11:30:00'
+    endDateTime: '2018-04-25 11:30:00'
   },
   {
     startDateTime: '2018-04-25T11:30:00',
-    endDateTime: '2018-04-25T12:30:00'
+    endDateTime: '2018-04-25 12:30:00'
   },
   {
     startDateTime: '2018-04-25T12:30:00',
-    endDateTime: '2018-04-25T13:30:00'
+    endDateTime: '2018-04-25 13:30:00'
   },
   {
     startDateTime: '2018-04-25T16:30:00',
-    endDateTime: '2018-04-25T17:30:00'
+    endDateTime: '2018-04-25 17:30:00'
   },
   {
     startDateTime: '2018-04-25T17:30:00',
-    endDateTime: '2018-04-25T18:30:00'
+    endDateTime: '2018-04-25 18:30:00'
   },
   {
     startDateTime: '2018-04-25T19:30:00',
-    endDateTime: '2018-04-25T20:30:00'
+    endDateTime: '2018-04-25 20:30:00'
   },
   {
     startDateTime: '2018-04-25T20:30:00',
-    endDateTime: '2018-04-25T21:30:00'
+    endDateTime: '2018-04-25 21:30:00'
   },
   {
     startDateTime: '2018-04-25T21:30:00',
-    endDateTime: '2018-04-25T22:30:00'
+    endDateTime: '2018-04-25 22:30:00'
   },
   {
     startDateTime: '2018-04-25T22:30:00',
-    endDateTime: '2018-04-25T23:30:00'
+    endDateTime: '2018-04-25 23:30:00'
   }
 ]
 
@@ -217,10 +217,10 @@ describe('Tests the state resource which handle diary entries', function () {
         CREATE_ENTRY_STATE_MACHINE_NAME,
         {sendResponse: 'COMPLETE'}
       )
-      if (i < 3) {
+      if (i < 4) {
         expect(execDesc.status).to.eql('SUCCEEDED')
       }
-      if (i === 3) {
+      if (i === 4) {
         expect(execDesc.status).to.eql('FAILED')
         expect(execDesc.errorCode).to.eql('Max. appointments of 3 already made at 2018-06-10 10:30:00.')
       }
@@ -314,7 +314,7 @@ describe('Tests the state resource which handle diary entries', function () {
 
   it('should test a booking with timezone', async () => {
     const start = '2018-08-21T08:30:00+01:00'
-    const end = '2018-08-21T09:30:00+01:00'
+    const end = '2018-08-21 09:30:00'
 
     const execDesc = await statebox.startExecution(
       {startDateTime: start},

@@ -1,0 +1,38 @@
+{
+  "slots": {
+    "durationMinutes": 60,
+    "maxConcurrency": 10,
+    "maxCapacity": 110,
+    "startTime": "08:30:00",
+    "endTime": "22:30:00",
+    "restrictions": {
+      "lunchTime": {
+        "timesAffected": [
+          "12:30:00",
+          "14:30:00"
+        ],
+        "changes": {
+          "maxConcurrency": 5
+        }
+      },
+      "changeOfShift": {
+        "timesAffected": [
+          "17:30:00",
+          "18:30:00"
+        ],
+        "changes": {
+          "maxConcurrency": 5
+        }
+      },
+      "lateShiftEnd": {
+        "timesAffected": [
+          "21:30:00",
+          "22:30:00"
+        ],
+        "changes": {
+          "maxConcurrency": 5
+        }
+      }
+    }
+  }
+}

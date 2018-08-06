@@ -1,0 +1,22 @@
+{
+  "Comment": "State machine to make a dentist booking.",
+  "StartAt": "CreateEntry",
+  "States": {
+    "CreateEntry": {
+      "Type": "Task",
+      "Resource": "module:createDiaryEntry",
+      "ResourceConfig": {
+        "diaryId": "dentist"
+      },
+      "End": true
+    }
+  },
+  "restrictions": [
+    {
+      "roleId": "$authenticated",
+      "allows": [
+        "*"
+      ]
+    }
+  ]
+}
