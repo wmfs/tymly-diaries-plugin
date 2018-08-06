@@ -312,6 +312,21 @@ describe('Tests the state resource which handle diary entries', function () {
     }
   })
 
+  it('should test a booking with timezone', async () => {
+    const start = '2018-08-21T08:30:00+01:00'
+    const end = '2018-08-21T09:30:00+01:00'
+
+    const execDesc = await statebox.startExecution(
+      {startDateTime: start},
+      CREATE_ENTRY_STATE_MACHINE_NAME,
+      {sendResponse: 'COMPLETE'}
+    )
+
+    const id = execDesc.ctx.idProperties.id
+    const res = await entryModel.findById(id)
+    expect(res.endDateTime).to.eql(end)
+  })
+
   it('should shutdown Tymly', async () => {
     await tymlyService.shutdown()
   })
