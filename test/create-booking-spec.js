@@ -73,9 +73,9 @@ describe('Testing create booking', function () {
   it('should test a series of bookings', async () => {
     for (const test of TEST_DATA) {
       const execDesc = await statebox.startExecution(
-        {startDateTime: test.startDateTime},
+        { startDateTime: test.startDateTime },
         CREATE_ENTRY_STATE_MACHINE_NAME,
-        {sendResponse: 'COMPLETE'}
+        { sendResponse: 'COMPLETE' }
       )
 
       const id = execDesc.ctx.idProperties.id
@@ -89,9 +89,9 @@ describe('Testing create booking', function () {
     const end = '2018-08-21 09:30:00'
 
     const execDesc = await statebox.startExecution(
-      {startDateTime: start},
+      { startDateTime: start },
       CREATE_ENTRY_STATE_MACHINE_NAME,
-      {sendResponse: 'COMPLETE'}
+      { sendResponse: 'COMPLETE' }
     )
 
     const id = execDesc.ctx.idProperties.id

@@ -151,9 +151,9 @@ describe('Tests the state resource which handle diary entries', function () {
     expect((await entryModel.find({})).length).to.eql(TEST_RECORDS.length)
 
     const execDesc = await statebox.startExecution(
-      {startDateTime: DATE_TIME},
+      { startDateTime: DATE_TIME },
       CREATE_ENTRY_STATE_MACHINE_NAME,
-      {sendResponse: 'COMPLETE'}
+      { sendResponse: 'COMPLETE' }
     )
 
     expect(execDesc.currentStateName).to.eql('CreateEntry')
@@ -174,9 +174,9 @@ describe('Tests the state resource which handle diary entries', function () {
 
   it('should start the create diary state machine with a start date time that collides with lunch time\'s maximum concurrency', async () => {
     const execDesc = await statebox.startExecution(
-      {startDateTime: BAD_DATE_TIME},
+      { startDateTime: BAD_DATE_TIME },
       CREATE_ENTRY_STATE_MACHINE_NAME,
-      {sendResponse: 'COMPLETE'}
+      { sendResponse: 'COMPLETE' }
     )
 
     expect(execDesc.currentStateName).to.eql('CreateEntry')
@@ -188,9 +188,9 @@ describe('Tests the state resource which handle diary entries', function () {
 
   it('should start the cancel-diary-entry state machine', async () => {
     const execDesc = await statebox.startExecution(
-      {id: entryId},
+      { id: entryId },
       CANCEL_ENTRY_STATE_MACHINE_NAME,
-      {sendResponse: 'COMPLETE'}
+      { sendResponse: 'COMPLETE' }
     )
 
     expect(execDesc.currentStateName).to.eql('CancelEntry')
@@ -213,9 +213,9 @@ describe('Tests the state resource which handle diary entries', function () {
 
     for (let i = 0; i < 4; i++) {
       const execDesc = await statebox.startExecution(
-        {startDateTime: time},
+        { startDateTime: time },
         CREATE_ENTRY_STATE_MACHINE_NAME,
-        {sendResponse: 'COMPLETE'}
+        { sendResponse: 'COMPLETE' }
       )
       if (i < 4) {
         expect(execDesc.status).to.eql('SUCCEEDED')
@@ -246,9 +246,9 @@ describe('Tests the state resource which handle diary entries', function () {
 
     for (const [i, time] of times.entries()) {
       const execDesc = await statebox.startExecution(
-        {startDateTime: time},
+        { startDateTime: time },
         CREATE_ENTRY_STATE_MACHINE_NAME,
-        {sendResponse: 'COMPLETE'}
+        { sendResponse: 'COMPLETE' }
       )
 
       if (i === 10) {
@@ -263,9 +263,9 @@ describe('Tests the state resource which handle diary entries', function () {
   it('should attempt to create entries at each time slot of the day', async () => {
     for (const [i, timeslot] of TEST_ENTRIES.entries()) {
       const execDesc = await statebox.startExecution(
-        {startDateTime: timeslot.startDateTime},
+        { startDateTime: timeslot.startDateTime },
         CREATE_ENTRY_STATE_MACHINE_NAME,
-        {sendResponse: 'COMPLETE'}
+        { sendResponse: 'COMPLETE' }
       )
 
       if (i === 0) {
@@ -317,9 +317,9 @@ describe('Tests the state resource which handle diary entries', function () {
     const end = '2018-08-21 09:30:00'
 
     const execDesc = await statebox.startExecution(
-      {startDateTime: start},
+      { startDateTime: start },
       CREATE_ENTRY_STATE_MACHINE_NAME,
-      {sendResponse: 'COMPLETE'}
+      { sendResponse: 'COMPLETE' }
     )
 
     const id = execDesc.ctx.idProperties.id
