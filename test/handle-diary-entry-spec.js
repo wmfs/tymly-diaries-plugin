@@ -182,8 +182,8 @@ describe('Tests the state resource which handle diary entries', function () {
     expect(execDesc.currentStateName).to.eql('CreateEntry')
     expect(execDesc.currentResource).to.eql('module:createDiaryEntry')
     expect(execDesc.status).to.eql('FAILED')
-    expect(execDesc.errorMessage).to.eql('createDiaryEntryFail')
-    expect(execDesc.errorCode).to.eql('Max. appointments already made at this time.')
+    expect(execDesc.errorCode).to.eql('createDiaryEntryFail')
+    expect(execDesc.errorMessage).to.eql('Max. appointments already made at this time.')
   })
 
   it('should start the cancel-diary-entry state machine', async () => {
@@ -222,7 +222,7 @@ describe('Tests the state resource which handle diary entries', function () {
       }
       if (i === 4) {
         expect(execDesc.status).to.eql('FAILED')
-        expect(execDesc.errorCode).to.eql('Max. appointments of 3 already made at 2018-06-10 10:30:00.')
+        expect(execDesc.errorMessage).to.eql('Max. appointments of 3 already made at 2018-06-10 10:30:00.')
       }
     }
   })
@@ -253,7 +253,7 @@ describe('Tests the state resource which handle diary entries', function () {
 
       if (i === 10) {
         expect(execDesc.status).to.eql('FAILED')
-        expect(execDesc.errorCode).to.eql('Max. appointments of 10 already made on 2018-07-23.')
+        expect(execDesc.errorMessage).to.eql('Max. appointments of 10 already made on 2018-07-23.')
       } else {
         expect(execDesc.status).to.eql('SUCCEEDED')
       }
@@ -270,14 +270,14 @@ describe('Tests the state resource which handle diary entries', function () {
 
       if (i === 0) {
         expect(execDesc.status).to.eql('FAILED')
-        expect(execDesc.errorCode).to.eql('The appointment must be after 08:30.')
+        expect(execDesc.errorMessage).to.eql('The appointment must be after 08:30.')
       } else if (i === 4 || i === 5) {
         // Lunch time restrictions
         expect(execDesc.status).to.eql('FAILED')
-        expect(execDesc.errorCode).to.eql('Max. appointments already made at this time.')
+        expect(execDesc.errorMessage).to.eql('Max. appointments already made at this time.')
       } else if (i === 11) {
         expect(execDesc.status).to.eql('FAILED')
-        expect(execDesc.errorCode).to.eql('The appointment must be before 22:30.')
+        expect(execDesc.errorMessage).to.eql('The appointment must be before 22:30.')
       } else {
         expect(execDesc.status).to.eql('SUCCEEDED')
         const id = execDesc.ctx.idProperties.id
