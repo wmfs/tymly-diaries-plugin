@@ -1,3 +1,11 @@
+# [1.4.0](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.3.0...v1.4.0) (2018-09-11)
+
+
+### 🛠 Builds
+
+* **deps:** update debug requirement from 4.0.0 to 4.0.1 ([066329f](https://github.com/wmfs/tymly-diaries-plugin/commit/066329f))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/hl-pg-client requirement ([2400571](https://github.com/wmfs/tymly-diaries-plugin/commit/2400571))
+
 # [1.3.0](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.2.0...v1.3.0) (2018-09-11)
 
 
