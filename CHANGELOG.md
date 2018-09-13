@@ -1,3 +1,16 @@
+# [1.5.0](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.4.0...v1.5.0) (2018-09-13)
+
+
+### 🛠 Builds
+
+* **deps:** update lodash requirement from 4.17.10 to 4.17.11 ([2a41c47](https://github.com/wmfs/tymly-diaries-plugin/commit/2a41c47))
+* **deps-dev:** update [@semantic-release](https://github.com/semantic-release)/git requirement ([f5db42b](https://github.com/wmfs/tymly-diaries-plugin/commit/f5db42b))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/hl-pg-client requirement ([bcd9049](https://github.com/wmfs/tymly-diaries-plugin/commit/bcd9049))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.26.1 to 1.29.0 ([61db130](https://github.com/wmfs/tymly-diaries-plugin/commit/61db130))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.29.0 to 1.30.0 ([628c608](https://github.com/wmfs/tymly-diaries-plugin/commit/628c608))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.30.0 to 1.31.0 ([cbebb65](https://github.com/wmfs/tymly-diaries-plugin/commit/cbebb65))
+* **deps-dev:** update semantic-release requirement ([9a8e5d4](https://github.com/wmfs/tymly-diaries-plugin/commit/9a8e5d4))
+
 # [1.4.0](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.3.0...v1.4.0) (2018-09-11)
 
 
