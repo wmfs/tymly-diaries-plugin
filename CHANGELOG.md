@@ -1,3 +1,24 @@
+# [1.6.0](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.5.0...v1.6.0) (2018-10-08)
+
+
+### 🛠 Builds
+
+* **deps:** update debug requirement from 4.0.1 to 4.1.0 ([9e1c11c](https://github.com/wmfs/tymly-diaries-plugin/commit/9e1c11c))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/hl-pg-client requirement ([fc42cce](https://github.com/wmfs/tymly-diaries-plugin/commit/fc42cce))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.31.0 to 1.32.0 ([1d95c8e](https://github.com/wmfs/tymly-diaries-plugin/commit/1d95c8e))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.32.0 to 1.33.0 ([befd6bb](https://github.com/wmfs/tymly-diaries-plugin/commit/befd6bb))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.33.0 to 1.34.0 ([ed25c75](https://github.com/wmfs/tymly-diaries-plugin/commit/ed25c75))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.34.0 to 1.35.0 ([51774e1](https://github.com/wmfs/tymly-diaries-plugin/commit/51774e1))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.35.0 to 1.36.0 ([1166907](https://github.com/wmfs/tymly-diaries-plugin/commit/1166907))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.36.0 to 1.37.0 ([d2d9d0f](https://github.com/wmfs/tymly-diaries-plugin/commit/d2d9d0f))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.37.0 to 1.39.0 ([81839aa](https://github.com/wmfs/tymly-diaries-plugin/commit/81839aa))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.39.0 to 1.40.0 ([fa71883](https://github.com/wmfs/tymly-diaries-plugin/commit/fa71883))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.40.0 to 1.41.0 ([7dae1c2](https://github.com/wmfs/tymly-diaries-plugin/commit/7dae1c2))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.41.0 to 1.42.0 ([f6e1175](https://github.com/wmfs/tymly-diaries-plugin/commit/f6e1175))
+* **deps-dev:** update chai requirement from 4.1.2 to 4.2.0 ([a325cfd](https://github.com/wmfs/tymly-diaries-plugin/commit/a325cfd))
+* **deps-dev:** update semantic-release requirement ([8d6e0c4](https://github.com/wmfs/tymly-diaries-plugin/commit/8d6e0c4))
+* **deps-dev:** update semantic-release requirement ([4a3bb4d](https://github.com/wmfs/tymly-diaries-plugin/commit/4a3bb4d))
+
 # [1.5.0](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.4.0...v1.5.0) (2018-09-13)
 
 
