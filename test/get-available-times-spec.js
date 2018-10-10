@@ -7,6 +7,7 @@ const expect = require('chai').expect
 const GET_TIMES_STATE_MACHINE_NAME = 'test_getAvailableTimes'
 
 const DATE_TIME = '2018-04-23'
+const DATE_TIME_1 = '2018-04-24'
 
 const initialData = [
   {
@@ -115,6 +116,89 @@ const initialData = [
   }
 ] // booked: 8:30-9:30, 9:30-10:30, 12:30-13:30(x5), 13:30-14:30(x5) 14:30-15:30
 
+const standardMaxConcurrency = [
+  {
+    originId: 'test',
+    diaryId: 'doctors',
+    startDateTime: '2018-04-24T08:30:00',
+    endDateTime: '2018-04-24T09:30:00',
+    info: {},
+    id: '426b87a8-46f1-11e8-842f-0ed5f89f718b'
+  },
+  {
+    originId: 'test',
+    diaryId: 'doctors',
+    startDateTime: '2018-04-24T08:30:00',
+    endDateTime: '2018-04-24T09:30:00',
+    info: {},
+    id: '426b87a8-46f1-11e8-842f-0ed5f89f718b'
+  },
+  {
+    originId: 'test',
+    diaryId: 'doctors',
+    startDateTime: '2018-04-24T08:30:00',
+    endDateTime: '2018-04-24T09:30:00',
+    info: {},
+    id: '426b87a8-46f1-11e8-842f-0ed5f89f718b'
+  },
+  {
+    originId: 'test',
+    diaryId: 'doctors',
+    startDateTime: '2018-04-24T08:30:00',
+    endDateTime: '2018-04-24T09:30:00',
+    info: {},
+    id: '426b87a8-46f1-11e8-842f-0ed5f89f718b'
+  },
+  {
+    originId: 'test',
+    diaryId: 'doctors',
+    startDateTime: '2018-04-24T08:30:00',
+    endDateTime: '2018-04-24T09:30:00',
+    info: {},
+    id: '426b87a8-46f1-11e8-842f-0ed5f89f718b'
+  },
+  {
+    originId: 'test',
+    diaryId: 'doctors',
+    startDateTime: '2018-04-24T08:30:00',
+    endDateTime: '2018-04-24T09:30:00',
+    info: {},
+    id: '426b87a8-46f1-11e8-842f-0ed5f89f718b'
+  },
+  {
+    originId: 'test',
+    diaryId: 'doctors',
+    startDateTime: '2018-04-24T08:30:00',
+    endDateTime: '2018-04-24T09:30:00',
+    info: {},
+    id: '426b87a8-46f1-11e8-842f-0ed5f89f718b'
+  },
+  {
+    originId: 'test',
+    diaryId: 'doctors',
+    startDateTime: '2018-04-24T08:30:00',
+    endDateTime: '2018-04-24T09:30:00',
+    info: {},
+    id: '426b87a8-46f1-11e8-842f-0ed5f89f718b'
+  },
+  {
+    originId: 'test',
+    diaryId: 'doctors',
+    startDateTime: '2018-04-24T08:30:00',
+    endDateTime: '2018-04-24T09:30:00',
+    info: {},
+    id: '426b87a8-46f1-11e8-842f-0ed5f89f718b'
+  },
+  {
+    originId: 'test',
+    diaryId: 'doctors',
+    startDateTime: '2018-04-24T08:30:00',
+    endDateTime: '2018-04-24T09:30:00',
+    info: {},
+    id: '426b87a8-46f1-11e8-842f-0ed5f89f718b'
+  }
+]
+
 const additionalData = [
   {
     originId: 'test',
@@ -196,6 +280,34 @@ describe('Test the get available times state resource', function () {
       })
     })
     done()
+  })
+
+  it('should setup the standardMaxConcurrency data in the entries model', done => {
+    Object.values(standardMaxConcurrency).map(datum => {
+      entryModel.upsert(datum, {}, (err, doc) => {
+        expect(err).to.eql(null)
+        expect(doc).to.not.eql(undefined)
+      })
+    })
+    done()
+  })
+
+  it('should find that 0830-0930 does not appear as per max standard concurrency rules', async () => {
+    const executionDescription = await statebox.startExecution(
+      {
+        date: DATE_TIME_1
+      },
+      GET_TIMES_STATE_MACHINE_NAME,
+      {
+        sendResponse: 'COMPLETE'
+      }
+    )
+
+    expect(executionDescription.currentStateName).to.eql('GetAvailableTimes')
+    expect(executionDescription.currentResource).to.eql('module:getAvailableDiarySlots')
+    expect(executionDescription.status).to.eql('SUCCEEDED')
+    const filtered = executionDescription.ctx.availableTimes.filter(e => ['08:30 - 09:30'].includes(e.label))
+    expect(filtered.length).to.eql(0)
   })
 
   it('should find that 1230-1330 and 1330-1430 are not listed as available', async () => {
