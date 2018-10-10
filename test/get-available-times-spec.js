@@ -32,8 +32,88 @@ const initialData = [
     endDateTime: '2018-04-23T15:30:00',
     info: {},
     id: '6d7fde94-46d3-11e8-842f-0ed5f89f718b'
+  },
+  {
+    originId: 'test',
+    diaryId: 'doctors',
+    startDateTime: '2018-04-23T12:30:00',
+    endDateTime: '2018-04-23T13:30:00',
+    info: {},
+    id: '6d7fde94-46d3-11e8-842f-0ed5f89f718b'
+  },
+  {
+    originId: 'test',
+    diaryId: 'doctors',
+    startDateTime: '2018-04-23T12:30:00',
+    endDateTime: '2018-04-23T13:30:00',
+    info: {},
+    id: '6d7fde94-46d3-11e8-842f-0ed5f89f718b'
+  },
+  {
+    originId: 'test',
+    diaryId: 'doctors',
+    startDateTime: '2018-04-23T12:30:00',
+    endDateTime: '2018-04-23T13:30:00',
+    info: {},
+    id: '6d7fde94-46d3-11e8-842f-0ed5f89f718b'
+  },
+  {
+    originId: 'test',
+    diaryId: 'doctors',
+    startDateTime: '2018-04-23T12:30:00',
+    endDateTime: '2018-04-23T13:30:00',
+    info: {},
+    id: '6d7fde94-46d3-11e8-842f-0ed5f89f718b'
+  },
+  {
+    originId: 'test',
+    diaryId: 'doctors',
+    startDateTime: '2018-04-23T12:30:00',
+    endDateTime: '2018-04-23T13:30:00',
+    info: {},
+    id: '6d7fde94-46d3-11e8-842f-0ed5f89f718b'
+  },
+  {
+    originId: 'test',
+    diaryId: 'doctors',
+    startDateTime: '2018-04-23T13:30:00',
+    endDateTime: '2018-04-23T14:30:00',
+    info: {},
+    id: '6d7fde94-46d3-11e8-842f-0ed5f89f718b'
+  },
+  {
+    originId: 'test',
+    diaryId: 'doctors',
+    startDateTime: '2018-04-23T13:30:00',
+    endDateTime: '2018-04-23T14:30:00',
+    info: {},
+    id: '6d7fde94-46d3-11e8-842f-0ed5f89f718b'
+  },
+  {
+    originId: 'test',
+    diaryId: 'doctors',
+    startDateTime: '2018-04-23T13:30:00',
+    endDateTime: '2018-04-23T14:30:00',
+    info: {},
+    id: '6d7fde94-46d3-11e8-842f-0ed5f89f718b'
+  },
+  {
+    originId: 'test',
+    diaryId: 'doctors',
+    startDateTime: '2018-04-23T13:30:00',
+    endDateTime: '2018-04-23T14:30:00',
+    info: {},
+    id: '6d7fde94-46d3-11e8-842f-0ed5f89f718b'
+  },
+  {
+    originId: 'test',
+    diaryId: 'doctors',
+    startDateTime: '2018-04-23T13:30:00',
+    endDateTime: '2018-04-23T14:30:00',
+    info: {},
+    id: '6d7fde94-46d3-11e8-842f-0ed5f89f718b'
   }
-] // booked: 8:30-9:30, 9:30-10:30, 14:30-15:30
+] // booked: 8:30-9:30, 9:30-10:30, 12:30-13:30(x5), 13:30-14:30(x5) 14:30-15:30
 
 const additionalData = [
   {
@@ -116,6 +196,24 @@ describe('Test the get available times state resource', function () {
       })
     })
     done()
+  })
+
+  it('should find that 1230-1330 and 1330-1430 are not listed as available', async () => {
+    const executionDescription = await statebox.startExecution(
+      {
+        date: DATE_TIME
+      },
+      GET_TIMES_STATE_MACHINE_NAME,
+      {
+        sendResponse: 'COMPLETE'
+      }
+    )
+
+    expect(executionDescription.currentStateName).to.eql('GetAvailableTimes')
+    expect(executionDescription.currentResource).to.eql('module:getAvailableDiarySlots')
+    expect(executionDescription.status).to.eql('SUCCEEDED')
+    const filtered = executionDescription.ctx.availableTimes.filter(e => ['12:30 - 13:30', '13:30 - 14:30'].includes(e.label))
+    expect(filtered.length).to.eql(0)
   })
 
   it('should start the get available times state machine', done => {
