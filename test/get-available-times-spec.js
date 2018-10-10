@@ -6,9 +6,10 @@ const expect = require('chai').expect
 
 const GET_TIMES_STATE_MACHINE_NAME = 'test_getAvailableTimes'
 
-const DATE_TIME = '2018-04-23'
-const DATE_TIME_1 = '2018-04-24'
+const DATE_TIME_1 = '2018-04-23'
+const DATE_TIME_2 = '2018-04-24'
 
+// booked: 8:30-9:30, 9:30-10:30, 12:30-13:30(x5), 13:30-14:30(x5) 14:30-15:30
 const initialData = [
   {
     originId: 'test',
@@ -114,8 +115,9 @@ const initialData = [
     info: {},
     id: '6d7fde94-46d3-11e8-842f-0ed5f89f718b'
   }
-] // booked: 8:30-9:30, 9:30-10:30, 12:30-13:30(x5), 13:30-14:30(x5) 14:30-15:30
+]
 
+// booked: 8:30-9:30(x10)
 const standardMaxConcurrency = [
   {
     originId: 'test',
@@ -272,114 +274,68 @@ describe('Test the get available times state resource', function () {
     expect(Object.keys(diaryService.diaries).includes('test_doctors')).to.eql(true)
   })
 
-  it('should setup some test initialData in the entries model', done => {
-    Object.values(initialData).map(datum => {
-      entryModel.upsert(datum, {}, (err, doc) => {
-        expect(err).to.eql(null)
-        expect(doc).to.not.eql(undefined)
-      })
-    })
-    done()
+  it('should setup some data in the entries model, including 5 bookings at 12:30 and 13:30 to test concurrency', async () => {
+    for (const datum of initialData) {
+      const doc = await entryModel.upsert(datum, {})
+      expect(doc).to.not.eql(undefined)
+    }
   })
 
-  it('should setup the standardMaxConcurrency data in the entries model', done => {
-    Object.values(standardMaxConcurrency).map(datum => {
-      entryModel.upsert(datum, {}, (err, doc) => {
-        expect(err).to.eql(null)
-        expect(doc).to.not.eql(undefined)
-      })
-    })
-    done()
+  it('should setup some data in the entries model, to test for the general max concurrency', async () => {
+    for (const datum of standardMaxConcurrency) {
+      const doc = await entryModel.upsert(datum, {})
+      expect(doc).to.not.eql(undefined)
+    }
   })
 
   it('should find that 0830-0930 does not appear as per max standard concurrency rules', async () => {
     const executionDescription = await statebox.startExecution(
-      {
-        date: DATE_TIME_1
-      },
+      { date: DATE_TIME_2 },
       GET_TIMES_STATE_MACHINE_NAME,
-      {
-        sendResponse: 'COMPLETE'
-      }
+      { sendResponse: 'COMPLETE' }
     )
 
     expect(executionDescription.currentStateName).to.eql('GetAvailableTimes')
     expect(executionDescription.currentResource).to.eql('module:getAvailableDiarySlots')
     expect(executionDescription.status).to.eql('SUCCEEDED')
-    const filtered = executionDescription.ctx.availableTimes.filter(e => ['08:30 - 09:30'].includes(e.label))
+    const filtered = executionDescription.ctx.availableTimes.filter(e => e.label === '08:30 - 09:30')
     expect(filtered.length).to.eql(0)
   })
 
   it('should find that 1230-1330 and 1330-1430 are not listed as available', async () => {
     const executionDescription = await statebox.startExecution(
-      {
-        date: DATE_TIME
-      },
+      { date: DATE_TIME_1 },
       GET_TIMES_STATE_MACHINE_NAME,
-      {
-        sendResponse: 'COMPLETE'
-      }
+      { sendResponse: 'COMPLETE' }
     )
 
     expect(executionDescription.currentStateName).to.eql('GetAvailableTimes')
     expect(executionDescription.currentResource).to.eql('module:getAvailableDiarySlots')
     expect(executionDescription.status).to.eql('SUCCEEDED')
+    expect(executionDescription.ctx.availableTimes[0].label).to.eql('08:30 - 09:30')
     const filtered = executionDescription.ctx.availableTimes.filter(e => ['12:30 - 13:30', '13:30 - 14:30'].includes(e.label))
     expect(filtered.length).to.eql(0)
   })
 
-  it('should start the get available times state machine', done => {
-    statebox.startExecution(
-      {
-        date: DATE_TIME
-      },
-      GET_TIMES_STATE_MACHINE_NAME,
-      {
-        sendResponse: 'COMPLETE'
-      },
-      (err, executionDescription) => {
-        if (err) return done(err)
-        expect(executionDescription.currentStateName).to.eql('GetAvailableTimes')
-        expect(executionDescription.currentResource).to.eql('module:getAvailableDiarySlots')
-        expect(executionDescription.status).to.eql('SUCCEEDED')
-        expect(executionDescription.ctx.availableTimes[0].label).to.be.a('string')
-        expect(executionDescription.ctx.availableTimes[0].label).to.eql('08:30 - 09:30')
-        expect(executionDescription.ctx.availableTimes[0].value.includes('2018-04-23T08:30:00')).to.eql(true)
-        done()
-      }
-    )
+  it('should setup some test additionalData in the entries model to remove/change the availableTimes return', async () => {
+    for (const datum of additionalData) {
+      const doc = await entryModel.upsert(datum, {})
+      expect(doc).to.not.eql(undefined)
+    }
   })
 
-  it('should setup some test additionalData in the entries model to remove/change the availableTimes return', done => {
-    Object.values(additionalData).map(datum => {
-      entryModel.upsert(datum, {}, (err, doc) => {
-        expect(err).to.eql(null)
-        expect(doc).to.not.eql(undefined)
-      })
-    })
-    done()
-  })
-
-  it('should start a second get available times state machine', done => {
-    statebox.startExecution(
-      {
-        date: DATE_TIME
-      },
+  it('should start a second get available times state machine', async () => {
+    const executionDescription = await statebox.startExecution(
+      { date: DATE_TIME_1 },
       GET_TIMES_STATE_MACHINE_NAME,
-      {
-        sendResponse: 'COMPLETE'
-      },
-      (err, executionDescription) => {
-        if (err) return done(err)
-        expect(executionDescription.currentStateName).to.eql('GetAvailableTimes')
-        expect(executionDescription.currentResource).to.eql('module:getAvailableDiarySlots')
-        expect(executionDescription.status).to.eql('SUCCEEDED')
-        expect(executionDescription.ctx.availableTimes[0].label).to.be.a('string')
-        expect(executionDescription.ctx.availableTimes[0].label).to.eql('09:30 - 10:30')
-        expect(executionDescription.ctx.availableTimes[0].value.includes('2018-04-23T09:30:00')).to.eql(true)
-        done()
-      }
+      { sendResponse: 'COMPLETE' }
     )
+    expect(executionDescription.currentStateName).to.eql('GetAvailableTimes')
+    expect(executionDescription.currentResource).to.eql('module:getAvailableDiarySlots')
+    expect(executionDescription.status).to.eql('SUCCEEDED')
+    expect(executionDescription.ctx.availableTimes[0].label).to.be.a('string')
+    expect(executionDescription.ctx.availableTimes[0].label).to.eql('09:30 - 10:30')
+    expect(executionDescription.ctx.availableTimes[0].value.includes('2018-04-23T09:30:00')).to.eql(true)
   })
 
   it('should shutdown Tymly', async () => {
