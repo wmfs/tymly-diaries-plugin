@@ -110,10 +110,10 @@ describe('Test the get available times state resource', function () {
     expect(executionDescription.status).to.eql('SUCCEEDED')
 
     const filtered = executionDescription.ctx.availableTimes.filter(e => ['10:30 - 11:30', '12:30 - 13:30', '18:30 - 19:30'].includes(e.label))
-    // expect(filtered.length).to.eql(0) UNCOMMENT WHEN FIXED
+    expect(filtered.length).to.eql(0)
 
     expect(executionDescription.ctx.availableTimes[0].label).to.eql('08:30 - 09:30')
-    expect(executionDescription.ctx.availableTimes[12].label).to.eql('21:30 - 22:30')
+    expect(executionDescription.ctx.availableTimes[10].label).to.eql('21:30 - 22:30')
   })
 
   it('should shutdown Tymly', async () => {
