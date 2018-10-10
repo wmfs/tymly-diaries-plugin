@@ -1,3 +1,26 @@
+## [1.6.1](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.6.0...v1.6.1) (2018-10-10)
+
+
+### 🐛 Bug Fixes
+
+* get available times to acknowledge restrictions ([2ce6d58](https://github.com/wmfs/tymly-diaries-plugin/commit/2ce6d58))
+
+
+### 🛠 Builds
+
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/hl-pg-client requirement ([4584c00](https://github.com/wmfs/tymly-diaries-plugin/commit/4584c00))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.42.0 to 1.44.0 ([039d5eb](https://github.com/wmfs/tymly-diaries-plugin/commit/039d5eb))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.44.0 to 1.45.0 ([b3f6fc3](https://github.com/wmfs/tymly-diaries-plugin/commit/b3f6fc3))
+
+
+### 🚨 Tests
+
+* **get-available-times-spec:** add test to ensure maxConcurrency restrictions are working ([57ea5ec](https://github.com/wmfs/tymly-diaries-plugin/commit/57ea5ec))
+* **get-available-times-spec:** add test to ensure standardMaxConcurrency rules are working ([1b65ff2](https://github.com/wmfs/tymly-diaries-plugin/commit/1b65ff2))
+* adjust max concurrency and times on test diary rules ([eb251cb](https://github.com/wmfs/tymly-diaries-plugin/commit/eb251cb))
+* simplify tests to get times ([1c42a49](https://github.com/wmfs/tymly-diaries-plugin/commit/1c42a49))
+* simplify tests to get times ([ff61901](https://github.com/wmfs/tymly-diaries-plugin/commit/ff61901))
+
 # [1.6.0](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.5.0...v1.6.0) (2018-10-08)
 
 
