@@ -17,11 +17,11 @@
       },
       "changeOfShift": {
         "timesAffected": [
-          "18:00:00",
-          "18:15:00"
+          "18:30:00",
+          "19:30:00"
         ],
         "changes": {
-          "maxConcurrency": 3
+          "maxConcurrency": 2
         }
       }
     }
