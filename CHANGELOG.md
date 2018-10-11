@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.7.0...v1.7.1) (2018-10-11)
+
+
+### 🐛 Bug Fixes
+
+* an attempted fix ([dcfa609](https://github.com/wmfs/tymly-diaries-plugin/commit/dcfa609))
+
 # [1.7.0](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.6.1...v1.7.0) (2018-10-11)
 
 
