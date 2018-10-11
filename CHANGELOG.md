@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.6.1...v1.7.0) (2018-10-11)
+
+
+### ✨ Features
+
+* **get-available-diary-slots:** add logs to aid live debugging ([0349143](https://github.com/wmfs/tymly-diaries-plugin/commit/0349143))
+
 ## [1.6.1](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.6.0...v1.6.1) (2018-10-10)
 
 
