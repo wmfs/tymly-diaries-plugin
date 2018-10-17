@@ -1,3 +1,15 @@
+## [1.7.2](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.7.1...v1.7.2) (2018-10-17)
+
+
+### 🐛 Bug Fixes
+
+* **get-available-diary-slots:** remove the logs from prev commit ([64c7e72](https://github.com/wmfs/tymly-diaries-plugin/commit/64c7e72))
+
+
+### 💎 Styles
+
+* Whitespace changes ([463276b](https://github.com/wmfs/tymly-diaries-plugin/commit/463276b))
+
 ## [1.7.1](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.7.0...v1.7.1) (2018-10-11)
 
 
