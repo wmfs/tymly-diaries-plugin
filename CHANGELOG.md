@@ -1,3 +1,11 @@
+# [1.9.0](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.8.0...v1.9.0) (2018-11-03)
+
+
+### 🛠 Builds
+
+* **deps:** update boom requirement from 7.2.1 to 7.2.2 ([bfbb993](https://github.com/wmfs/tymly-diaries-plugin/commit/bfbb993))
+* **deps-dev:** update semantic-release requirement ([7cbdecd](https://github.com/wmfs/tymly-diaries-plugin/commit/7cbdecd))
+
 # [1.8.0](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.7.2...v1.8.0) (2018-11-01)
 
 
