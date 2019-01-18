@@ -1,0 +1,11 @@
+{
+  "CreateDiaryEntry": {
+    "Type": "Task",
+    "Resource": "module:createDiaryEntry",
+    "ResourceConfig": {
+      "diaryId": "safeAndWellBooking",
+      "originId": "Safe and Well"
+    },
+    "End": true
+  }
+}

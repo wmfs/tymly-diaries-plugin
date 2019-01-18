@@ -1,0 +1,8 @@
+{
+  "CancelDiaryEntry": {
+    "Type": "Task",
+    "Resource": "module:cancelDiaryEntry",
+    "InputPath": "$.id",
+    "End": true
+  }
+}

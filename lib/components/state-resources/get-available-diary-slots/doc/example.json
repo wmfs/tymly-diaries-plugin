@@ -1,0 +1,10 @@
+{
+  "GetAvailableDiarySlots": {
+    "Type": "Task",
+    "Resource": "module:getAvailableDiarySlots",
+    "ResourceConfig": {
+      "diaryId": "safeAndWellBooking"
+    },
+    "End": true
+  }
+}
