@@ -38,7 +38,7 @@
     "@semantic-release/changelog": "3.0.1",
     "@semantic-release/git": "7.0.6",
     "@wmfs/hl-pg-client": "1.10.0",
-    "@wmfs/tymly": "1.75.0",
+    "@wmfs/tymly": "1.80.3",
     "@wmfs/tymly-test-helpers": "1.2.0"
   },
   "scripts": {
