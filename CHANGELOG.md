@@ -1,3 +1,39 @@
+# [1.10.0](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.9.0...v1.10.0) (2019-02-08)
+
+
+### 🛠 Builds
+
+* **deps:** bump moment, debug, boom ([e614d74](https://github.com/wmfs/tymly-diaries-plugin/commit/e614d74))
+* **deps-dev:** update [@semantic-release](https://github.com/semantic-release)/git requirement ([44e48f7](https://github.com/wmfs/tymly-diaries-plugin/commit/44e48f7))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/hl-pg-client requirement ([8151849](https://github.com/wmfs/tymly-diaries-plugin/commit/8151849))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.58.0 to 1.59.0 ([1765d73](https://github.com/wmfs/tymly-diaries-plugin/commit/1765d73))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.59.0 to 1.60.0 ([c2d8783](https://github.com/wmfs/tymly-diaries-plugin/commit/c2d8783))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.60.0 to 1.61.0 ([0b6e2f0](https://github.com/wmfs/tymly-diaries-plugin/commit/0b6e2f0))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.61.0 to 1.62.0 ([7b9135a](https://github.com/wmfs/tymly-diaries-plugin/commit/7b9135a))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.62.0 to 1.63.0 ([654ca30](https://github.com/wmfs/tymly-diaries-plugin/commit/654ca30))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.63.0 to 1.64.0 ([9a8e30e](https://github.com/wmfs/tymly-diaries-plugin/commit/9a8e30e))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.64.0 to 1.65.0 ([1d1ce2b](https://github.com/wmfs/tymly-diaries-plugin/commit/1d1ce2b))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.65.0 to 1.65.1 ([5b9a589](https://github.com/wmfs/tymly-diaries-plugin/commit/5b9a589))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.65.1 to 1.66.0 ([c406d77](https://github.com/wmfs/tymly-diaries-plugin/commit/c406d77))
+* **deps-dev:** update semantic-release requirement ([033daa6](https://github.com/wmfs/tymly-diaries-plugin/commit/033daa6))
+* **deps-dev:** update semantic-release requirement ([1d95833](https://github.com/wmfs/tymly-diaries-plugin/commit/1d95833))
+* **deps-dev:** update semantic-release requirement ([79f7bba](https://github.com/wmfs/tymly-diaries-plugin/commit/79f7bba))
+* **deps-dev:** update semantic-release requirement ([3cc8c8f](https://github.com/wmfs/tymly-diaries-plugin/commit/3cc8c8f))
+* **deps-dev:** update semantic-release requirement ([ff5f7f6](https://github.com/wmfs/tymly-diaries-plugin/commit/ff5f7f6))
+* **deps-dev:** update semantic-release requirement ([#178](https://github.com/wmfs/tymly-diaries-plugin/issues/178)) ([b091614](https://github.com/wmfs/tymly-diaries-plugin/commit/b091614))
+* **dev-deps:** bump nyc, [@wmfs](https://github.com/wmfs)/tymly, [@semantic-release](https://github.com/semantic-release)/* ([766f2ce](https://github.com/wmfs/tymly-diaries-plugin/commit/766f2ce))
+
+
+### ⚙️ Continuous Integrations
+
+* **circle:** add circle ci config ([4e59c3d](https://github.com/wmfs/tymly-diaries-plugin/commit/4e59c3d))
+* **travis:** update travis config ([def6c5d](https://github.com/wmfs/tymly-diaries-plugin/commit/def6c5d))
+
+
+### ♻️ Chores
+
+* Add state resource examples ([cfd67cc](https://github.com/wmfs/tymly-diaries-plugin/commit/cfd67cc))
+
 # [1.9.0](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.8.0...v1.9.0) (2018-11-03)
 
 
