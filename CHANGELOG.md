@@ -1,3 +1,15 @@
+# [1.11.0](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.10.0...v1.11.0) (2019-03-12)
+
+
+### ✨ Features
+
+* search doc rating is numeric now ([eb86455](https://github.com/wmfs/tymly-diaries-plugin/commit/eb86455))
+
+
+### 📦 Code Refactoring
+
+* beginnings of search doc ([20a1713](https://github.com/wmfs/tymly-diaries-plugin/commit/20a1713))
+
 # [1.10.0](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.9.0...v1.10.0) (2019-02-08)
 
 
