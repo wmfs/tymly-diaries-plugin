@@ -14,7 +14,7 @@
     "activeEvent": "false::boolean",
     "author": "'tymly_diaryEntry'::text",
     "teams": "NULL::text[]",
-    "rating": "NULL::text",
+    "rating": "NULL::numeric",
     "data": "info::text",
     "roles": "'{\"$everyone\"}'::text[]",
     "tags": "NULL::text[]",
