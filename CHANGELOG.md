@@ -1,3 +1,15 @@
+## [1.11.1](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.11.0...v1.11.1) (2019-04-25)
+
+
+### 🐛 Bug Fixes
+
+* bump ([4f92cc8](https://github.com/wmfs/tymly-diaries-plugin/commit/4f92cc8))
+
+
+### 📦 Code Refactoring
+
+* remove search doc ([8474138](https://github.com/wmfs/tymly-diaries-plugin/commit/8474138))
+
 # [1.11.0](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.10.0...v1.11.0) (2019-03-12)
 
 
