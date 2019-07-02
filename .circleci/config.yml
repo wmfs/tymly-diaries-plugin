@@ -31,7 +31,9 @@ jobs:
     working_directory: ~/repo
     steps:
     - checkout
-    # run semantic-release for GitHub & NPM release
+    - run:
+        name: install
+        command: npm install
     - run:
         name: release using semantic-release
         command: npx semantic-release
