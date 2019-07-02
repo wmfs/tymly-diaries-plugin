@@ -1,7 +1,7 @@
 # tymly-diaries-plugin
 [![Tymly Package](https://img.shields.io/badge/tymly-package-blue.svg)](https://tymly.io/)
 [![npm (scoped)](https://img.shields.io/npm/v/@wmfs/tymly-diaries-plugin.svg)](https://www.npmjs.com/package/@wmfs/tymly-diaries-plugin)
-[![Build Status](https://travis-ci.org/wmfs/tymly-diaries-plugin.svg?branch=master)](https://travis-ci.org/wmfs/tymly-diaries-plugin)
+[![CircleCI](https://circleci.com/gh/wmfs/tymly-diaries-plugin.svg?style=svg)](https://circleci.com/gh/wmfs/tymly-diaries-plugin)
 [![codecov](https://codecov.io/gh/wmfs/tymly-diaries-plugin/branch/master/graph/badge.svg)](https://codecov.io/gh/wmfs/tymly-diaries-plugin)
 [![CodeFactor](https://www.codefactor.io/repository/github/wmfs/tymly-diaries-plugin/badge)](https://www.codefactor.io/repository/github/wmfs/tymly-diaries-plugin)
 [![Dependabot badge](https://img.shields.io/badge/Dependabot-active-brightgreen.svg)](https://dependabot.com/)
