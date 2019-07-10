@@ -23,7 +23,7 @@
   "dependencies": {
     "boom": "7.3.0",
     "debug": "4.1.1",
-    "lodash": "4.17.11",
+    "lodash": "4.17.13",
     "moment": "2.24.0"
   },
   "devDependencies": {
