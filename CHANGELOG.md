@@ -1,3 +1,35 @@
+# [1.12.0](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.11.1...v1.12.0) (2019-08-06)
+
+
+### ✨ Features
+
+* if date is today only get available slots after current time ([a91181e](https://github.com/wmfs/tymly-diaries-plugin/commit/a91181e))
+
+
+### 🛠 Builds
+
+* **deps-dev:** update [@semantic-release](https://github.com/semantic-release)/git requirement ([12cb023](https://github.com/wmfs/tymly-diaries-plugin/commit/12cb023))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/hl-pg-client requirement ([3d82411](https://github.com/wmfs/tymly-diaries-plugin/commit/3d82411))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.81.0 to 1.94.1 ([1cab177](https://github.com/wmfs/tymly-diaries-plugin/commit/1cab177))
+* **deps-dev:** update mocha requirement from 5.2.0 to 6.1.4 ([13097ae](https://github.com/wmfs/tymly-diaries-plugin/commit/13097ae))
+* **deps-dev:** update nyc requirement from 13.2.0 to 14.1.1 ([6a1cc1c](https://github.com/wmfs/tymly-diaries-plugin/commit/6a1cc1c))
+* **deps-dev:** update semantic-release requirement ([3920367](https://github.com/wmfs/tymly-diaries-plugin/commit/3920367))
+
+
+### 📚 Documentation
+
+* Add CircleCI badge ([ce78f24](https://github.com/wmfs/tymly-diaries-plugin/commit/ce78f24))
+
+
+### ⚙️ Continuous Integrations
+
+* **circle:** Add postgres config for testing ([4313d8b](https://github.com/wmfs/tymly-diaries-plugin/commit/4313d8b))
+* **circle:** Need to install in release step ([30c104f](https://github.com/wmfs/tymly-diaries-plugin/commit/30c104f))
+* **circle:** Update cirlceci config - migration from Travis ([7632675](https://github.com/wmfs/tymly-diaries-plugin/commit/7632675))
+* **circle:** update step name [skip ci] ([9a72e12](https://github.com/wmfs/tymly-diaries-plugin/commit/9a72e12))
+* **circle:** Update timezone config ([9cdcb16](https://github.com/wmfs/tymly-diaries-plugin/commit/9cdcb16))
+* **travis:** remove Travis config ([589818c](https://github.com/wmfs/tymly-diaries-plugin/commit/589818c))
+
 ## [1.11.1](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.11.0...v1.11.1) (2019-04-25)
 
 
