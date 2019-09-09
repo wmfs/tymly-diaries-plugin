@@ -1,3 +1,10 @@
+# [1.13.0](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.12.0...v1.13.0) (2019-09-09)
+
+
+### 🛠 Builds
+
+* **deps:** update lodash requirement from 4.17.11 to 4.17.15 ([63ca669](https://github.com/wmfs/tymly-diaries-plugin/commit/63ca669))
+
 # [1.12.0](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.11.1...v1.12.0) (2019-08-06)
 
 
