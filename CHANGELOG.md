@@ -1,3 +1,15 @@
+## [1.13.1](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.13.0...v1.13.1) (2019-11-14)
+
+
+### 🐛 Bug Fixes
+
+* statelint warnings ([](https://github.com/wmfs/tymly-diaries-plugin/commit/d8f88d3))
+
+
+### 🛠 Builds
+
+* **deps-dev:** update dev dependancies ([](https://github.com/wmfs/tymly-diaries-plugin/commit/c450071))
+
 # [1.13.0](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.12.0...v1.13.0) (2019-09-09)
 
 
