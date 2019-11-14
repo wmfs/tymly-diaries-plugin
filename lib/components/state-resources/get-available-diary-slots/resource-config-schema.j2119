@@ -1,0 +1,2 @@
+This document specifies a JSON object called a "GetTimesConfig".
+A GetTimesConfig MUST have an string field named "diaryId".
