@@ -1,0 +1,13 @@
+{
+  "name": "diaries",
+  "version": "1.13.1",
+  "label": "Diaries",
+  "author": "Meena Hoda",
+  "organisation": "West Midlands Fire Service",
+  "description": "Tymly plugin to handle bookings and appointments",
+  "categories": [
+    "diary",
+    "appointments",
+    "bookings"
+  ]
+}
