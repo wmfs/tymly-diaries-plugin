@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+. .version
+echo $VERSION
+version=$VERSION
+sudo apt-get install jq
+sudo jq --arg version "$version" '.version=$version' plugin.json > plugin_edit.json && mv plugin_edit.json plugin.json
+git config --global user.name "$GIT_COMMITTER_NAME"
+git config --global user.email "$GIT_COMMITTER_EMAIL"
+git remote set-url origin https://${GIT_COMMITTER_NAME}:${GH_TOKEN}@github.com/wmfs/tymly-diaries-plugin.git
+git checkout master
+git add plugin.json
+git commit -m "chore(version): plugin $version [skip ci]"
+git push
