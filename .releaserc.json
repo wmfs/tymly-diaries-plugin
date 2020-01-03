@@ -16,6 +16,10 @@
   },
   "prepare": [
     {
+      "path": "@semantic-release/exec",
+      "cmd": "echo 'VERSION=${nextRelease.version}' > .version && ./version_plugin"
+    },
+    {
       "path": "@semantic-release/changelog",
       "changelogFile": "CHANGELOG.md"
     },
