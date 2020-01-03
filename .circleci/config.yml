@@ -42,7 +42,9 @@ jobs:
         command: npm install
     - run:
         name: release
-        command: npx semantic-release
+        command: |
+          chmod +x version_plugin
+          npx semantic-release
 
 
 workflows:
