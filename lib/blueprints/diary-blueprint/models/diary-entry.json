@@ -29,5 +29,31 @@
       "description": "Some information about this entry"
     }
   },
-  "audit": false
+  "audit": false,
+  "indexes": [
+    {
+      "columns": [
+        "info"
+      ],
+      "unique": false
+    },
+    {
+      "columns": [
+        "diary_id"
+      ],
+      "unique": false
+    },
+    {
+      "columns": [
+        "start_date_time"
+      ],
+      "unique": false
+    },
+    {
+      "columns": [
+        "end_date_time"
+      ],
+      "unique": false
+    }
+  ]
 }
