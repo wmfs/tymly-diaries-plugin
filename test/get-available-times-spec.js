@@ -81,7 +81,7 @@ describe('Test the get available times state resource', function () {
         tymlyService = tymlyServices.tymly
         statebox = tymlyServices.statebox
         diaryService = tymlyServices.diaries
-        entryModel = tymlyServices.storage.models['tymly_diaryEntry']
+        entryModel = tymlyServices.storage.models.tymly_diaryEntry
         done()
       }
     )

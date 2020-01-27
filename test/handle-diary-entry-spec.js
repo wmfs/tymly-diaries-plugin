@@ -131,7 +131,7 @@ describe('Tests the state resource which handle diary entries', function () {
         tymlyService = tymlyServices.tymly
         statebox = tymlyServices.statebox
         diaryService = tymlyServices.diaries
-        entryModel = tymlyServices.storage.models['tymly_diaryEntry']
+        entryModel = tymlyServices.storage.models.tymly_diaryEntry
         done()
       }
     )
@@ -142,7 +142,7 @@ describe('Tests the state resource which handle diary entries', function () {
   })
 
   it('should create some records', async () => {
-    for (let rec of TEST_RECORDS) { await entryModel.upsert(rec, {}) }
+    for (const rec of TEST_RECORDS) { await entryModel.upsert(rec, {}) }
 
     expect((await entryModel.find({})).length).to.eql(TEST_RECORDS.length)
   })
@@ -209,7 +209,7 @@ describe('Tests the state resource which handle diary entries', function () {
   })
 
   it('should attempt to create > 3 entries at the same date time and expect failure', async () => {
-    const time = `2018-06-10T10:30:00`
+    const time = '2018-06-10T10:30:00'
 
     for (let i = 0; i < 4; i++) {
       const execDesc = await statebox.startExecution(
@@ -228,7 +228,7 @@ describe('Tests the state resource which handle diary entries', function () {
   })
 
   it('should attempt to create > 10 entries at the same date and expect failure', async () => {
-    const times = [`2018-07-23T08:30:00`]
+    const times = ['2018-07-23T08:30:00']
     for (let i = 1; i < 11; i++) {
       const time = moment(times[i - 1]).add(1, 'hour')
       if (time.format('HH:mm:ss') === '11:30:00') {
@@ -303,11 +303,11 @@ describe('Tests the state resource which handle diary entries', function () {
     const start = moment('2018-04-25T12:00:00')
     const end = moment('2018-04-25T13:30:00')
 
-    for (let time of good) {
+    for (const time of good) {
       expect(isWithinRange(start, end, time)).to.eql(false)
     }
 
-    for (let time of bad) {
+    for (const time of bad) {
       expect(isWithinRange(start, end, time)).to.eql(true)
     }
   })

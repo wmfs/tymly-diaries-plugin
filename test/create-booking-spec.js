@@ -64,7 +64,7 @@ describe('Testing create booking', function () {
         expect(err).to.eql(null)
         tymlyService = tymlyServices.tymly
         statebox = tymlyServices.statebox
-        entryModel = tymlyServices.storage.models['tymly_diaryEntry']
+        entryModel = tymlyServices.storage.models.tymly_diaryEntry
         done()
       }
     )
