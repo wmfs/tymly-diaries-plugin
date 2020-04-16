@@ -1,3 +1,71 @@
+## [1.13.3](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.13.2...v1.13.3) (2020-04-16)
+
+
+### 🐛 Bug Fixes
+
+* **state-resources:** Remove callback parameter from init methods ([38a8469](https://github.com/wmfs/tymly-diaries-plugin/commit/38a8469e21e14d963fd5e0cbe6a7e8e37bdb8c53))
+
+
+### 🛠 Builds
+
+* **deps-dev:** bump [@semantic-release](https://github.com/semantic-release)/changelog from 3.0.6 to 5.0.0 ([310d217](https://github.com/wmfs/tymly-diaries-plugin/commit/310d217a65ee12415216565b05b4838803852791))
+* **deps-dev:** bump [@semantic-release](https://github.com/semantic-release)/changelog from 5.0.0 to 5.0.1 ([02c277a](https://github.com/wmfs/tymly-diaries-plugin/commit/02c277aaf18d880fe1ae79fb03f387db360bbf7d))
+* **deps-dev:** bump [@semantic-release](https://github.com/semantic-release)/exec from 3.3.8 to 5.0.0 ([de3ba1a](https://github.com/wmfs/tymly-diaries-plugin/commit/de3ba1a0425deccd4d0dc31aed567b467991f371))
+* **deps-dev:** bump [@semantic-release](https://github.com/semantic-release)/git from 7.0.18 to 9.0.0 ([2eb0c03](https://github.com/wmfs/tymly-diaries-plugin/commit/2eb0c031e43cbbb0725c49d3ec8fb44acdfc756e))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/hl-pg-client from 1.14.0 to 1.15.0 ([17dd73a](https://github.com/wmfs/tymly-diaries-plugin/commit/17dd73a273564ad66f2f41fd3658252e33bcb283))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/hl-pg-client from 1.15.0 to 1.16.0 ([247daf8](https://github.com/wmfs/tymly-diaries-plugin/commit/247daf83fab2cbee74938cd3e9586e391df24706))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/hl-pg-client from 1.16.0 to 1.17.0 ([4299eed](https://github.com/wmfs/tymly-diaries-plugin/commit/4299eed08a0549d7cb38e82cd1123e23d8d54c1b))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/hl-pg-client from 1.17.0 to 1.18.0 ([f0f2202](https://github.com/wmfs/tymly-diaries-plugin/commit/f0f2202e296c5674070f39eea4883bb05ff85ac3))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/hl-pg-client from 1.18.0 to 1.19.0 ([2ba5873](https://github.com/wmfs/tymly-diaries-plugin/commit/2ba587317e81b1fcfb49335ddb3af6a7719823ea))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/hl-pg-client from 1.19.0 to 1.20.0 ([8c3545b](https://github.com/wmfs/tymly-diaries-plugin/commit/8c3545b26c7cb7f824a1cf9392f2d6cd4cc8d0ef))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.110.0 to 1.112.0 ([8a54531](https://github.com/wmfs/tymly-diaries-plugin/commit/8a54531f56f8ba6369a037fcaacf33da7239fe51))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.112.0 to 1.112.1 ([2f6e765](https://github.com/wmfs/tymly-diaries-plugin/commit/2f6e7654e5b5cc411c6eabed9fd048fc47b36bae))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.112.1 to 1.113.0 ([64cf685](https://github.com/wmfs/tymly-diaries-plugin/commit/64cf685aea1f1aa45f6e6f6d06af3409727f5f1c))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.113.0 to 1.114.0 ([e2e72e6](https://github.com/wmfs/tymly-diaries-plugin/commit/e2e72e6550dbf2e4d32236e3f57116f2cdccc134))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.114.0 to 1.115.0 ([ea66ab5](https://github.com/wmfs/tymly-diaries-plugin/commit/ea66ab571d7b28b8e7dcdaf1784e2e5e7dc38c4b))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.115.0 to 1.116.0 ([6edfcaa](https://github.com/wmfs/tymly-diaries-plugin/commit/6edfcaabcb794513b18e5e5231d066ec1e641419))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.116.0 to 1.117.0 ([988a633](https://github.com/wmfs/tymly-diaries-plugin/commit/988a6338aec506df23784e64061ddbf3fdbf0808))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.117.0 to 1.118.0 ([6acd708](https://github.com/wmfs/tymly-diaries-plugin/commit/6acd708427bca59eb290e3870161f3f1a07efae9))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.118.0 to 1.119.0 ([cf8c687](https://github.com/wmfs/tymly-diaries-plugin/commit/cf8c68750e82e9f468508892b9405277c9b3511d))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.119.0 to 1.120.0 ([4a14617](https://github.com/wmfs/tymly-diaries-plugin/commit/4a14617ddac4eb35524cd32d5c02e5efc934fcdd))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.120.0 to 1.126.2 ([2b775a2](https://github.com/wmfs/tymly-diaries-plugin/commit/2b775a29a03f24aaaa3a7b9d24b2befc7cda8564))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.126.2 to 1.127.0 ([649e751](https://github.com/wmfs/tymly-diaries-plugin/commit/649e751ce33c9df7210ca50a8bee7bb7530fef70))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.127.0 to 1.128.0 ([b688b31](https://github.com/wmfs/tymly-diaries-plugin/commit/b688b31bc6a53481780dca1460d973db8d30df30))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.128.0 to 1.129.0 ([d1afbf7](https://github.com/wmfs/tymly-diaries-plugin/commit/d1afbf746be59a5049310302e26fe060b2cecffd))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.129.0 to 1.130.0 ([2384791](https://github.com/wmfs/tymly-diaries-plugin/commit/2384791f361f33dcb738c1e5683684806987a3ed))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.130.0 to 1.131.0 ([efbc51b](https://github.com/wmfs/tymly-diaries-plugin/commit/efbc51b37b1b30e9871a6ce6a07e9402e8b72bc4))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.131.0 to 1.135.0 ([4d0f64c](https://github.com/wmfs/tymly-diaries-plugin/commit/4d0f64c3c03f746a34999676feb1d0e74c2c4f03))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.135.0 to 1.135.1 ([bd545ef](https://github.com/wmfs/tymly-diaries-plugin/commit/bd545efb98f4e0befdd19fbdc091d329a31e4abc))
+* **deps-dev:** bump codecov from 3.6.1 to 3.6.2 ([4de41c7](https://github.com/wmfs/tymly-diaries-plugin/commit/4de41c7e325acbd673c013bab7581468170d18b2))
+* **deps-dev:** bump codecov from 3.6.2 to 3.6.3 ([4623f6f](https://github.com/wmfs/tymly-diaries-plugin/commit/4623f6fcca8f5ed9c1253f863c2dfd871b51ed7f))
+* **deps-dev:** bump codecov from 3.6.3 to 3.6.4 ([8fbe60c](https://github.com/wmfs/tymly-diaries-plugin/commit/8fbe60ca07f1896ffe85a8336e007f3c7dde18ce))
+* **deps-dev:** bump codecov from 3.6.4 to 3.6.5 ([b81cd80](https://github.com/wmfs/tymly-diaries-plugin/commit/b81cd80e3494e21d32521a6d1bf4e09bf2d04f24))
+* **deps-dev:** bump conventional-changelog-metahub from 4.0.0 to 4.0.1 ([ecb3bf2](https://github.com/wmfs/tymly-diaries-plugin/commit/ecb3bf2d3646a13afbab1bac87cf9d2ac5320ee6))
+* **deps-dev:** bump cz-conventional-changelog from 3.0.2 to 3.1.0 ([e41cb6f](https://github.com/wmfs/tymly-diaries-plugin/commit/e41cb6fa0e43338359d249d8b2035946612ca4eb))
+* **deps-dev:** bump mocha from 7.0.0 to 7.0.1 ([1e45c81](https://github.com/wmfs/tymly-diaries-plugin/commit/1e45c812f185fdd83fc27e4d6a0cb3e8e9cdc872))
+* **deps-dev:** bump mocha from 7.0.1 to 7.1.0 ([9b64ff1](https://github.com/wmfs/tymly-diaries-plugin/commit/9b64ff16cec87a506de832c48aa86675dbeb674e))
+* **deps-dev:** bump mocha from 7.1.0 to 7.1.1 ([5f7f398](https://github.com/wmfs/tymly-diaries-plugin/commit/5f7f39846c7cf90bfbbf6b63ced2e5232e299725))
+* **deps-dev:** bump nyc from 15.0.0 to 15.0.1 ([79abdb7](https://github.com/wmfs/tymly-diaries-plugin/commit/79abdb711e57136044664cc79315e0daeaac1577))
+* **deps-dev:** bump semantic-release from 15.14.0 to 17.0.4 ([b0fbdce](https://github.com/wmfs/tymly-diaries-plugin/commit/b0fbdcee7048077d29a7c9505ea11419e2d4b2b6))
+* **deps-dev:** bump standard from 14.3.1 to 14.3.2 ([b275b53](https://github.com/wmfs/tymly-diaries-plugin/commit/b275b53ef98424922ed4a347bf96866a31c43c9d))
+* **deps-dev:** bump standard from 14.3.2 to 14.3.3 ([378dbda](https://github.com/wmfs/tymly-diaries-plugin/commit/378dbdad37b1d4b67db0666c5952c34635042e83))
+* **deps-dev:** update standard requirement from 12.0.1 to 14.3.1 ([d8b1eac](https://github.com/wmfs/tymly-diaries-plugin/commit/d8b1eac51acf5dc5d20779d9dfded4627d87e0d3))
+
+
+### 📦 Code Refactoring
+
+* **state-resource:** Rework to use model promise interface, not callback ([1cb916d](https://github.com/wmfs/tymly-diaries-plugin/commit/1cb916d4c79343c01939738730857aad219b065f))
+
+
+### ⚙️ Continuous Integrations
+
+* **circle:** add context env var config to config.yml ([fc23a5b](https://github.com/wmfs/tymly-diaries-plugin/commit/fc23a5b00ba724dddade5871f556eb975fb6b2d5))
+
+
+### 💎 Styles
+
+* standard --fix ([a441ece](https://github.com/wmfs/tymly-diaries-plugin/commit/a441ece400968faf51e2abfd4e444563652c57fa))
+
 ## [1.13.2](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.13.1...v1.13.2) (2020-01-20)
 
 
