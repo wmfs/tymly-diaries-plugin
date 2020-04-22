@@ -1,3 +1,17 @@
+# [1.14.0](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.13.3...v1.14.0) (2020-04-22)
+
+
+### 🛠 Builds
+
+* **deps:** Removed unused packages. ([f8156a0](https://github.com/wmfs/tymly-diaries-plugin/commit/f8156a0c8c738ad260a79e6b137b5af94eb151e7))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.135.1 to 1.135.2 ([30925f9](https://github.com/wmfs/tymly-diaries-plugin/commit/30925f947b41bdb1ff79bb04afe8e242358b050f))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.135.2 to 1.136.0 ([9f91236](https://github.com/wmfs/tymly-diaries-plugin/commit/9f91236bd6b8ece8762d7f7769f450535bca337b))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.136.0 to 1.137.0 ([413336c](https://github.com/wmfs/tymly-diaries-plugin/commit/413336ccd4b2b0eb4b789c464b08ae0074427c34))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly-test-helpers from 1.4.0 to 1.4.1 ([c48410a](https://github.com/wmfs/tymly-diaries-plugin/commit/c48410a7c2800aaa7ad09758e894c89be035fe73))
+* **deps-dev:** bump semantic-release from 17.0.4 to 17.0.5 ([c73cb77](https://github.com/wmfs/tymly-diaries-plugin/commit/c73cb7755d9e5e11d2de247344707284527f9784))
+* **deps-dev:** bump semantic-release from 17.0.5 to 17.0.6 ([1b416aa](https://github.com/wmfs/tymly-diaries-plugin/commit/1b416aa72ecffcaf8ec6fcbf026b8ed20b1bef70))
+* **deps-dev:** bump semantic-release from 17.0.6 to 17.0.7 ([04e096f](https://github.com/wmfs/tymly-diaries-plugin/commit/04e096fcac1bdde0842e6f94115f00fcf7adab85))
+
 ## [1.13.3](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.13.2...v1.13.3) (2020-04-16)
 
 
