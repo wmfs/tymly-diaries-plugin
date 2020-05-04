@@ -21,7 +21,7 @@
   },
   "main": "./lib/index.js",
   "dependencies": {
-    "moment": "2.24.0"
+    "moment": "2.25.3"
   },
   "devDependencies": {
     "chai": "4.2.0",
