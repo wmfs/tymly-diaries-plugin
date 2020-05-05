@@ -1,3 +1,18 @@
+## [1.14.1](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.14.0...v1.14.1) (2020-05-05)
+
+
+### 🐛 Bug Fixes
+
+* **diaries-service:** Remove redundant boo callback parameter ([66b87ba](https://github.com/wmfs/tymly-diaries-plugin/commit/66b87bac86fe9484eb44c488d4ecd782ff7d24ed))
+
+
+### 🛠 Builds
+
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.137.0 to 1.137.1 ([b4114dc](https://github.com/wmfs/tymly-diaries-plugin/commit/b4114dcd43e56c2fd9da8fe231dd3672690537b7))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.137.1 to 1.137.2 ([7947bc7](https://github.com/wmfs/tymly-diaries-plugin/commit/7947bc766fb091a99cf74d59afbf47291bd8c4d1))
+* **deps-dev:** bump cz-conventional-changelog from 3.1.0 to 3.2.0 ([a9a4c7d](https://github.com/wmfs/tymly-diaries-plugin/commit/a9a4c7d84b5074d5ecd828237a0cf51a94018674))
+* **deps-dev:** bump mocha from 7.1.1 to 7.1.2 ([d00e0d5](https://github.com/wmfs/tymly-diaries-plugin/commit/d00e0d54143f4b6529da7c90494a929d1e666c2d))
+
 # [1.14.0](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.13.3...v1.14.0) (2020-04-22)
 
 
