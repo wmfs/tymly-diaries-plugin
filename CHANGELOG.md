@@ -1,3 +1,19 @@
+# [1.15.0](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.14.1...v1.15.0) (2020-05-31)
+
+
+### 🛠 Builds
+
+* **deps:** bump moment from 2.24.0 to 2.26.0 ([3406151](https://github.com/wmfs/tymly-diaries-plugin/commit/34061516130dc15138f2fde3fad56d80ac2e6eed))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/hl-pg-client from 1.20.0 to 1.21.0 ([72f3bfb](https://github.com/wmfs/tymly-diaries-plugin/commit/72f3bfb1601ac45fdec745573b5e1cb259aa3246))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.137.2 to 1.137.3 ([282fdb8](https://github.com/wmfs/tymly-diaries-plugin/commit/282fdb8e9f5ee60c0d6f41899c14a86a723a33ff))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.137.3 to 1.138.0 ([6038d3e](https://github.com/wmfs/tymly-diaries-plugin/commit/6038d3ecde263e2bb9a10f3dd47e65e2ed5f52f1))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.138.0 to 1.140.0 ([a5536e3](https://github.com/wmfs/tymly-diaries-plugin/commit/a5536e32cdd421945c14979c7fb1ac124c911a27))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly-test-helpers from 1.4.1 to 1.4.2 ([e1aed51](https://github.com/wmfs/tymly-diaries-plugin/commit/e1aed51d6c63862984ccff0567dbd6aabbc5922e))
+* **deps-dev:** bump codecov from 3.6.5 to 3.7.0 ([7db1de9](https://github.com/wmfs/tymly-diaries-plugin/commit/7db1de97ad6dd0cc3d7067cadf69637197a4ff73))
+* **deps-dev:** bump mocha from 7.1.2 to 7.2.0 ([bc4232d](https://github.com/wmfs/tymly-diaries-plugin/commit/bc4232dc217eb1c03bd0f91190a34c587d90e996))
+* **deps-dev:** bump semantic-release from 17.0.7 to 17.0.8 ([044eee1](https://github.com/wmfs/tymly-diaries-plugin/commit/044eee1921ae48c21ae69fa099f344d4a5da0211))
+* **deps-dev:** bump standard from 14.3.3 to 14.3.4 ([132327f](https://github.com/wmfs/tymly-diaries-plugin/commit/132327f47c70b6d6f5ac79f15732efe5afee97e7))
+
 ## [1.14.1](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.14.0...v1.14.1) (2020-05-05)
 
 
