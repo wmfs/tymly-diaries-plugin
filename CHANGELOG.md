@@ -1,3 +1,24 @@
+# [1.16.0](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.15.0...v1.16.0) (2020-07-01)
+
+
+### 🛠 Builds
+
+* **deps:** bump moment from 2.26.0 to 2.27.0 ([629c3e7](https://github.com/wmfs/tymly-diaries-plugin/commit/629c3e768749881ef83658635d83b9fb8df500b5))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.140.0 to 1.141.0 ([a8d4a6c](https://github.com/wmfs/tymly-diaries-plugin/commit/a8d4a6cc7d457b04fe8804764dfca2acf9d4a298))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.141.0 to 1.142.0 ([49f18d9](https://github.com/wmfs/tymly-diaries-plugin/commit/49f18d9993091095c57f5b6dc5dadbbfd568196f))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.142.0 to 1.143.0 ([7149687](https://github.com/wmfs/tymly-diaries-plugin/commit/71496877157d06b812e7367bddc0aea48f978ada))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.143.0 to 1.144.0 ([993130f](https://github.com/wmfs/tymly-diaries-plugin/commit/993130fe5217b1abce1549ce51e2837323e79e9d))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.144.0 to 1.145.0 ([176e5cb](https://github.com/wmfs/tymly-diaries-plugin/commit/176e5cb655235b6df23dbd86afe470bcc9da3f0e))
+* **deps-dev:** bump mocha from 7.2.0 to 8.0.1 ([6e35af1](https://github.com/wmfs/tymly-diaries-plugin/commit/6e35af1172730ee3744ec3374c0e0ac4d562e9a0))
+* **deps-dev:** bump nyc from 15.0.1 to 15.1.0 ([e12a6ee](https://github.com/wmfs/tymly-diaries-plugin/commit/e12a6ee99442ca1395a3435885cbd7fd050f7413))
+* **deps-dev:** bump semantic-release from 17.0.8 to 17.1.0 ([c4bb60b](https://github.com/wmfs/tymly-diaries-plugin/commit/c4bb60bb23b434c42ef305bdf6fab55d63a4f535))
+* **deps-dev:** bump semantic-release from 17.1.0 to 17.1.1 ([1ce9656](https://github.com/wmfs/tymly-diaries-plugin/commit/1ce96561ca2163441073a79f8b242ab621d28627))
+
+
+### ⚙️ Continuous Integrations
+
+* **circle:** use updated circle node image [skip ci] ([114bcf5](https://github.com/wmfs/tymly-diaries-plugin/commit/114bcf51c47c9aeefea414bee7ec14bf831e7679))
+
 # [1.15.0](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.14.1...v1.15.0) (2020-05-31)
 
 
