@@ -1,3 +1,14 @@
+# [1.18.0](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.17.0...v1.18.0) (2020-10-08)
+
+
+### 🛠 Builds
+
+* **deps:** bump moment from 2.29.0 to 2.29.1 ([e535337](https://github.com/wmfs/tymly-diaries-plugin/commit/e535337ed240635b9e6c041d570defb8451c42da))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/hl-pg-client from 1.23.0 to 1.25.0 ([26553f0](https://github.com/wmfs/tymly-diaries-plugin/commit/26553f0c44f493bc05121def622b00b89dc501d6))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.160.0 to 1.162.0 ([363a5e2](https://github.com/wmfs/tymly-diaries-plugin/commit/363a5e2a3f9111ac23d287dbe941934e88ff684c))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.162.0 to 1.164.0 ([f28e2a4](https://github.com/wmfs/tymly-diaries-plugin/commit/f28e2a498da9ad0b9f9c1fee5c5261a43bbedf7e))
+* **deps-dev:** bump codecov from 3.7.2 to 3.8.0 ([0a6f985](https://github.com/wmfs/tymly-diaries-plugin/commit/0a6f9859684c628a25735d19d17c6405bf1f9076))
+
 # [1.17.0](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.16.0...v1.17.0) (2020-09-28)
 
 
