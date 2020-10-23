@@ -32,9 +32,7 @@ jobs:
             - node_modules
       - run:
           name: test
-          command: |
-            TEST=$(circleci tests glob "./test/*.js" | circleci tests split)
-            npm test $TEST
+          command: npm test
       - run:
           name: codecov
           command: npm run coverage
