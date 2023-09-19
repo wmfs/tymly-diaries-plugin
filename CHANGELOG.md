@@ -1,3 +1,61 @@
+# [1.20.0](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.19.0...v1.20.0) (2023-09-19)
+
+
+### 🛠 Builds
+
+* **deps-dev:** update dependency [@semantic-release](https://github.com/semantic-release)/changelog to v6.0.2 ([bd2992d](https://github.com/wmfs/tymly-diaries-plugin/commit/bd2992d29ca21351113404d6d3020c59d9a4b4c2))
+* **deps-dev:** update dependency [@semantic-release](https://github.com/semantic-release)/changelog to v6.0.3 ([1cd90a2](https://github.com/wmfs/tymly-diaries-plugin/commit/1cd90a2d4e133a5478a66a9945c244233e5d469e))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/hl-pg-client to v1.30.0 ([b7fe34e](https://github.com/wmfs/tymly-diaries-plugin/commit/b7fe34e5b9c711b6553f6980655352edf67bf8fc))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/hl-pg-client to v1.31.0 ([f87339b](https://github.com/wmfs/tymly-diaries-plugin/commit/f87339b6227cb6f4e0261ccf24a53fa67cc29620))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.242.0 ([a06363a](https://github.com/wmfs/tymly-diaries-plugin/commit/a06363a1c233f89931e0253ae9c9dba744c2f56c))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.243.0 ([f351d67](https://github.com/wmfs/tymly-diaries-plugin/commit/f351d676b840f6d9458135dbc4f2cff9229832c6))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.244.0 ([c6dec6f](https://github.com/wmfs/tymly-diaries-plugin/commit/c6dec6f8933c024c318ede6fa302ef6321192e75))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.246.0 ([563695a](https://github.com/wmfs/tymly-diaries-plugin/commit/563695a9d5cf518e34338628b15fb35eb47b5332))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.247.0 ([4c21bf0](https://github.com/wmfs/tymly-diaries-plugin/commit/4c21bf064b706156b7bf2c7bc81561b54c6f205d))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.247.1 ([ba43698](https://github.com/wmfs/tymly-diaries-plugin/commit/ba4369845263d9b0178ef339401506af340a014a))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.248.0 ([dcbf2c5](https://github.com/wmfs/tymly-diaries-plugin/commit/dcbf2c5ce3c56bf4627b14f5b56cdc87431b54c1))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.256.0 ([21a380a](https://github.com/wmfs/tymly-diaries-plugin/commit/21a380a24db0d68be184716628efb12eb2aedb71))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.258.0 ([b16670e](https://github.com/wmfs/tymly-diaries-plugin/commit/b16670ea06252739afc81a88161e744a42dbe617))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.261.0 ([1453202](https://github.com/wmfs/tymly-diaries-plugin/commit/1453202ed803ced029d5fd5ea024cdcc5aeb1b3a))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly-test-helpers to v1.22.0 ([0741a77](https://github.com/wmfs/tymly-diaries-plugin/commit/0741a77316db2b85a87a3b7a3d71fc12ee8b329d))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly-test-helpers to v1.22.1 ([dcd08a9](https://github.com/wmfs/tymly-diaries-plugin/commit/dcd08a98cd0de2eb268aea5f9944d4577d74d7a3))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly-test-helpers to v1.22.2 ([2c3fb92](https://github.com/wmfs/tymly-diaries-plugin/commit/2c3fb92e4378de8d5bc09aad61fbbf86f2da8cf8))
+* **deps-dev:** update dependency chai to v4.3.7 ([c84622c](https://github.com/wmfs/tymly-diaries-plugin/commit/c84622c72a5224fa3c46be380b209f56795e50af))
+* **deps-dev:** update dependency chai to v4.3.8 ([5a1ebd9](https://github.com/wmfs/tymly-diaries-plugin/commit/5a1ebd9408d245552c74dabc58338dc570cf8773))
+* **deps-dev:** update dependency mocha to v10.1.0 ([9584070](https://github.com/wmfs/tymly-diaries-plugin/commit/95840707ad202b337fbd850a64743ae26c9ab59c))
+* **deps-dev:** update dependency mocha to v10.2.0 ([161a4fd](https://github.com/wmfs/tymly-diaries-plugin/commit/161a4fdc973095cbbd0454455f4e4b753c2eb436))
+* **deps-dev:** update dependency semantic-release to v19.0.4 ([b8f1a88](https://github.com/wmfs/tymly-diaries-plugin/commit/b8f1a885d0ef582aa7cf3bd2270ea3f44e191482))
+* **deps-dev:** update dependency semantic-release to v19.0.5 ([4516e2a](https://github.com/wmfs/tymly-diaries-plugin/commit/4516e2a9b1bdd04e93e06cedae5fd835b1571d83))
+* **deps-dev:** update dependency semantic-release to v20 ([e1e2390](https://github.com/wmfs/tymly-diaries-plugin/commit/e1e2390121a9bd97d087cb47b72536d5075d2c18))
+* **deps-dev:** update dependency semantic-release to v20.0.1 ([03e6c45](https://github.com/wmfs/tymly-diaries-plugin/commit/03e6c458045cafe05781a6cda39f30b1db7140b6))
+* **deps-dev:** update dependency semantic-release to v20.0.2 ([13937ca](https://github.com/wmfs/tymly-diaries-plugin/commit/13937caf9ab3c5bce4639f420466b66fe1693f22))
+* **deps-dev:** update dependency semantic-release to v20.0.3 ([bebfb9f](https://github.com/wmfs/tymly-diaries-plugin/commit/bebfb9f5d26ee1556812ef341dc5b02d02d87150))
+* **deps-dev:** update dependency semantic-release to v20.0.4 ([10ef092](https://github.com/wmfs/tymly-diaries-plugin/commit/10ef092edbd5ea72da5463f7a0b695addbc83682))
+* **deps-dev:** update dependency semantic-release to v20.1.0 ([3d9f565](https://github.com/wmfs/tymly-diaries-plugin/commit/3d9f565b5b88ce623f055f46d45d3ad0a5f68c13))
+* **deps-dev:** update dependency semantic-release to v20.1.1 ([f2a51ca](https://github.com/wmfs/tymly-diaries-plugin/commit/f2a51ca6d821da3ce89c750026d25564671e8a42))
+* **deps-dev:** update dependency semantic-release to v20.1.3 ([06c2ba2](https://github.com/wmfs/tymly-diaries-plugin/commit/06c2ba25435e11229a8c12b5165529a21403dce1))
+* **deps-dev:** update dependency semantic-release to v21 ([1a1fae7](https://github.com/wmfs/tymly-diaries-plugin/commit/1a1fae7d5dff997ae8fb480e8cca24f6bc93fdff))
+* **deps-dev:** update dependency semantic-release to v21.0.1 ([e51a565](https://github.com/wmfs/tymly-diaries-plugin/commit/e51a565c62b935aaec7d6ca081e9d4889418640a))
+* **deps-dev:** update dependency semantic-release to v21.0.2 ([4e7e2f1](https://github.com/wmfs/tymly-diaries-plugin/commit/4e7e2f1b31e90841a4c6339a3a76acdf5d13d421))
+* **deps-dev:** update dependency semantic-release to v21.0.3 ([6b6fd16](https://github.com/wmfs/tymly-diaries-plugin/commit/6b6fd16ad67aa0044a51771bd211dd9b1910b0d1))
+* **deps-dev:** update dependency semantic-release to v21.0.5 ([1bbf991](https://github.com/wmfs/tymly-diaries-plugin/commit/1bbf991f5402b1a0217af4f1888b43c29c2b991c))
+* **deps-dev:** update dependency semantic-release to v21.0.6 ([d2fe952](https://github.com/wmfs/tymly-diaries-plugin/commit/d2fe9523a9f694ef9477aca36f62d45e99eac9e2))
+* **deps-dev:** update dependency semantic-release to v21.0.7 ([5e1a31f](https://github.com/wmfs/tymly-diaries-plugin/commit/5e1a31fbc1b39eff6bddc2f76908541b02fccd43))
+* **deps-dev:** update dependency semantic-release to v21.0.9 ([8b8672e](https://github.com/wmfs/tymly-diaries-plugin/commit/8b8672e42fb368466786255086b3d9c4db5c0eec))
+* **deps-dev:** update dependency semantic-release to v21.1.0 ([eb1cf1d](https://github.com/wmfs/tymly-diaries-plugin/commit/eb1cf1d92fe5cf511d306e40c87fcf97f5a9c0ff))
+* **deps-dev:** update dependency semantic-release to v21.1.1 ([ccde3c1](https://github.com/wmfs/tymly-diaries-plugin/commit/ccde3c1091094173637f8bb4d490cb7250c65f7e))
+* **deps-dev:** update dependency semantic-release to v21.1.2 ([4284119](https://github.com/wmfs/tymly-diaries-plugin/commit/4284119e13fc209cb4e073062e1a75e9be141ed2))
+* **deps-dev:** update dependency semantic-release to v22 ([5aa1a91](https://github.com/wmfs/tymly-diaries-plugin/commit/5aa1a9106183fc321a0c33917e57a41862adcaab))
+* **deps-dev:** update dependency standard to v17.1.0 ([1312744](https://github.com/wmfs/tymly-diaries-plugin/commit/1312744692907373418cd459148554b272dd5d31))
+* **deps:** revert semantic-release ([e8c2721](https://github.com/wmfs/tymly-diaries-plugin/commit/e8c2721af9c138085565d8637c210cf23ad2a2a6))
+
+
+### ⚙️ Continuous Integrations
+
+* **circle:** CircleCI update PostgreSQL image to 15 0 [sc-18659] ([9082842](https://github.com/wmfs/tymly-diaries-plugin/commit/908284225c6e2687e3e6a082fff09ded0ac1d3c8))
+* **circle:** update postgres to 15.1-postgis ([272a560](https://github.com/wmfs/tymly-diaries-plugin/commit/272a560f039ad5053c544073ef63333a18a46114))
+* **circle:** update postgres to 15.2-postgis [sc-19693] ([c94a732](https://github.com/wmfs/tymly-diaries-plugin/commit/c94a73281bd30705a95c994405055645ca63bf24))
+
 # [1.19.0](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.18.0...v1.19.0) (2022-08-10)
 
 
