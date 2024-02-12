@@ -1,3 +1,10 @@
+# [1.21.0](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.20.0...v1.21.0) (2024-02-12)
+
+
+### Bug Fixes
+
+* update release notes generator preset ([265a725](https://github.com/wmfs/tymly-diaries-plugin/commit/265a725b85be1fc9d3afb2c211e2193a3f4b6e43))
+
 # [1.20.0](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.19.0...v1.20.0) (2023-09-19)
 
 
