@@ -1,3 +1,5 @@
+## [1.22.1](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.22.0...v1.22.1) (2026-08-13)
+
 ## [1.22.0](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.21.0...v1.22.0) (2025-10-21)
 
 ### Build system dependencies :hammer:
