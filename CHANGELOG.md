@@ -1,3 +1,26 @@
+## [1.23.0](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.22.1...v1.23.0) (2026-10-30)
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** fix conventionalcommit versions [sc-34125] ([c152a34](https://github.com/wmfs/tymly-diaries-plugin/commit/c152a340516dee6288c972c28e75de3e53c5a4d5))
+* **deps-dev:** update dependency @wmfs/hl-pg-client to v1.46.1 ([#779](https://github.com/wmfs/tymly-diaries-plugin/issues/779)) ([a8b27cd](https://github.com/wmfs/tymly-diaries-plugin/commit/a8b27cd052b3cb0b00b0078738b07665a6387e88))
+* **deps-dev:** update dependency @wmfs/tymly to v1.317.1 ([#780](https://github.com/wmfs/tymly-diaries-plugin/issues/780)) ([1092992](https://github.com/wmfs/tymly-diaries-plugin/commit/1092992319a6528a66d8b448013ceab82ec57a81))
+* **deps-dev:** update dependency @wmfs/tymly to v1.319.0 ([#793](https://github.com/wmfs/tymly-diaries-plugin/issues/793)) ([b3dff89](https://github.com/wmfs/tymly-diaries-plugin/commit/b3dff898c7ccb4131d006e7dc01e893d89c8b8c8))
+* **deps-dev:** update dependency @wmfs/tymly to v1.322.0 ([#794](https://github.com/wmfs/tymly-diaries-plugin/issues/794)) ([3716b3a](https://github.com/wmfs/tymly-diaries-plugin/commit/3716b3a4ff6b3ec938a62cf05bdc2022448e4431))
+* **deps-dev:** update dependency @wmfs/tymly-test-helpers to v1.24.1 ([#781](https://github.com/wmfs/tymly-diaries-plugin/issues/781)) ([7076a31](https://github.com/wmfs/tymly-diaries-plugin/commit/7076a31bf202b15dd703d3b482d2f7aed857b023))
+* **deps-dev:** update dependency conventional-changelog-conventionalcommits to v10.4.0 ([#782](https://github.com/wmfs/tymly-diaries-plugin/issues/782)) ([b6d4301](https://github.com/wmfs/tymly-diaries-plugin/commit/b6d43013f55f39dbb8eb885a8c3275dea9962ffa))
+* **deps-dev:** update dependency conventional-changelog-conventionalcommits to v10.4.1 ([#790](https://github.com/wmfs/tymly-diaries-plugin/issues/790)) ([45586b2](https://github.com/wmfs/tymly-diaries-plugin/commit/45586b2f293c0a52716c45391081374b8929de4d))
+* **deps-dev:** update dependency mocha to v12 ([#783](https://github.com/wmfs/tymly-diaries-plugin/issues/783)) ([5f2c664](https://github.com/wmfs/tymly-diaries-plugin/commit/5f2c664d093802821e18369a2c51e66d660aa5e5))
+* **deps-dev:** update dependency mocha to v12.0.1 ([#784](https://github.com/wmfs/tymly-diaries-plugin/issues/784)) ([00951ca](https://github.com/wmfs/tymly-diaries-plugin/commit/00951cae375b2d7ceb43cd82170a95582c2d2705))
+* **deps-dev:** update dependency mocha to v12.0.2 ([#786](https://github.com/wmfs/tymly-diaries-plugin/issues/786)) ([d9abf8d](https://github.com/wmfs/tymly-diaries-plugin/commit/d9abf8df86ab43db9c8eff1f7fd325641c3f60bf))
+* **deps-dev:** update dependency mocha to v12.0.3 ([#787](https://github.com/wmfs/tymly-diaries-plugin/issues/787)) ([1b16384](https://github.com/wmfs/tymly-diaries-plugin/commit/1b16384a811988a0728709eabe055f9c050698d0))
+* **deps:** update dependency moment to v2.31.0 [security] ([#789](https://github.com/wmfs/tymly-diaries-plugin/issues/789)) ([b73d803](https://github.com/wmfs/tymly-diaries-plugin/commit/b73d80346b831b29a9f239f5b5276e8dc295acfa))
+
+### CICD Configuration Changes :construction_worker:
+
+* use github-app-token orb for release token [sc-34101] ([#791](https://github.com/wmfs/tymly-diaries-plugin/issues/791)) ([3cb4936](https://github.com/wmfs/tymly-diaries-plugin/commit/3cb49365234502e6e7927ea29ce5a5dd903bf5ab))
+* use shared renovate preset [sc-34117] ([#792](https://github.com/wmfs/tymly-diaries-plugin/issues/792)) ([e8f4d10](https://github.com/wmfs/tymly-diaries-plugin/commit/e8f4d10204d3af4b8c9f3b8e0fb526a51ef294d7))
+
 ## [1.22.1](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.22.0...v1.22.1) (2026-08-13)
 
 ## [1.22.0](https://github.com/wmfs/tymly-diaries-plugin/compare/v1.21.0...v1.22.0) (2025-10-21)
